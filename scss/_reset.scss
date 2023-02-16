@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body, div, p, h1, h2, h3, h4, h6, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%; 
+}
+
+p, input, button {
+    font-family: inherit; 
+}
+
+ul {
+    list-style: none;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    margin: 0;
+}

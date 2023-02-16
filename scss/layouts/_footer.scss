@@ -1,0 +1,26 @@
+.footer {
+    width: 100%;
+    background-color: $main;
+    color: $white; 
+
+    .footer_content__wrapper {
+        @include flex-space-between-align-center; 
+        @include font($font-weight-regular, 12px, 16px);
+        max-width: 690px;
+        width: 100%;
+        margin: 24px auto;
+        padding: 0 15px;
+
+        .warning_text {
+            color: #73CDFE; 
+        }
+    
+        .privacy_policy__link {
+            @include transition(0.6s);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        } 
+    }
+  }

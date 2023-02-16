@@ -1,0 +1,295 @@
+body {
+    height: 100%;
+    font-family: $font-family-roboto; 
+    background-color: $bg;
+
+    &.lock {
+        overflow: hidden;
+        background-color: rgba(84, 92, 135, 0.8);; 
+    }
+}
+
+// custom scrollbar
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+} 
+
+::-webkit-scrollbar-thumb {
+    background: #1B6EBE; 
+} 
+
+// Form controls 
+
+label {
+    display: block;
+    color: $label-color;
+    @include font($font-weight-regular, $tiny-font-size, 16px);
+    padding-bottom: 5px;
+}
+
+input {
+    box-sizing: border-box; 
+    padding: 10px 30px 10px 10px;
+    font-family: inherit;
+    @include font($font-weight-regular, $small-font-size, 18px); 
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    outline: none; 
+
+    &:not(&[type='checkbox'], &[type='radio']){
+        width: 100%;
+    }
+}
+
+button:disabled,
+button[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+// Spacing
+
+.pt-5 { padding-top: 5px; } 
+.pt-10 { padding-top: 10px; } 
+.pt-15 { padding-top: 15px; }
+.pt-20 { padding-top: 20px; } 
+.pt-30 { padding-top: 30px; } 
+.pt-40 { padding-top: 40px; }
+.pt-50 { padding-top: 50px; }
+.pt-60 { padding-top: 60px; }
+
+.pb-5 { padding-bottom: 5px; }
+.pb-10 { padding-bottom: 10px; }
+.pb-15 { padding-bottom: 15px; }
+.pb-20 { padding-bottom: 20px; }
+.pb-25 { padding-bottom: 25px; }
+.pb-30 { padding-bottom: 30px; }
+.pb-40 { padding-bottom: 40px; }
+.pb-50 { padding-bottom: 50px; }
+.pb-60 { padding-bottom: 60px; } 
+
+.mt-5 { margin-top: 5px; } 
+.mt-10 { margin-top: 10px; } 
+.mt-20 { margin-top: 20px; } 
+.mt-30 { margin-top: 30px; } 
+.mt-40 { margin-top: 40px; }
+.mt-50 { margin-top: 50px; }
+.mt-60 { margin-top: 60px; }
+
+.mb-5 { margin-bottom: 5px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+.mb-50 { margin-bottom: 50px; }
+.mb-60 { margin-bottom: 60px; }
+
+// general classes
+
+.button {
+    border-radius: 3px;
+    padding: 8px 0;
+    border: none;
+    cursor: pointer;
+    @include transition(0.4s); 
+
+    &:hover:not(button:disabled, button[disabled]) {
+        transform: scale(0.98); 
+    }
+}
+
+.form_button {
+    width: 100%;
+    font-size: $regular-font-size;
+    line-height: 18px;
+    padding: 11px 0;
+}
+
+.button-olive {
+    font-weight: $font-weight-semibold;
+    color: $white;
+    background-color: $secondery;
+}
+
+.button-main {
+    font-weight: $font-weight-medium;
+    color: $white;
+    background-color: $main;
+}
+
+.call_link {
+    position: relative;
+    text-decoration: underline;
+    white-space: nowrap;
+    font-weight: $font-weight-medium;
+    @include transition(0.4s);
+    
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -18px;
+        content: url('/svg/icons/phone.svg');
+    }
+
+    &:hover { 
+        transform: scale(0.98);
+    }
+}
+
+.callback_link {
+    text-decoration: underline;
+    white-space: nowrap; 
+    @include font($font-weight-regular, $regular-font-size, 18px);
+    color: $main;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    @include transition(0.4s); 
+
+    &:hover { 
+        transform: scale(1.1);
+    }
+}
+
+.back_to {
+    color: $main;
+    @include font($font-weight-regular, $small-font-size, 16px);
+    position: relative;
+    padding-left: 20px;
+    @include transition(0.4s);
+
+    &::before {
+        position: absolute;
+        content: url('/svg/icons/arrow-left.svg');
+        top: 0;
+        left: 0; 
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.back_link {
+    color: $black;
+    @include font($font-weight-medium, $regular-font-size, 18px);
+    position: relative;
+    padding-left: 21px;
+    @include transition(0.4s);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+
+    &::before {
+        position: absolute;
+        content: url('/svg/icons/arrow-link.svg');
+        top: 0;
+        left: 0; 
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        padding-left: 26px;
+    }
+}
+
+.title {
+    color: #333333;
+    @include font($font-weight-medium, $large-font-size, 28px); 
+}
+
+.form_group_wrapper:not(.form_group_wrapper:last-of-type) {
+    padding-bottom: 25px;
+}
+
+.form_group_flex {
+    display: flex; 
+    align-items: start;
+}
+
+.form_text, 
+.label_by_check {
+    @include font($font-weight-regular, $small-font-size, 16px);
+    color: $black;
+}
+
+.label_by_check {
+    display: inline;
+    padding-left: 10px;
+    padding-bottom: 0;
+} 
+
+span.error {
+    display: block;
+    padding-top: 5px;
+    @include font($font-weight-regular, 11px, 16px);
+    color: $error;
+}
+
+input.error {
+    border-color: $error;
+    color: $error;
+
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: $error;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: $error;
+        opacity:  1;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: $error;
+       opacity:  1;
+    }
+    &::placeholder {/* Firefox */
+        color: $error;
+        opacity: 1;
+    } 
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $error;
+    } 
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $error;
+    }
+} 
+
+.toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F9F9FF;
+    border-radius: 133.884px;
+
+    .toggle__item {
+        flex-basis: 50%; 
+        text-align: center;
+        padding: 0;
+        position: relative;
+        cursor: pointer;
+        
+        & span {
+            display: block; 
+            font-weight: $font-weight-medium;
+            font-size: 16px;
+            line-height: 38px; 
+            color: $black;
+        }
+
+        & input[type='radio'] {
+            opacity: 0;
+            outline: none;
+            position: absolute;
+            z-index: -1;
+        }
+
+        & input[type='radio']:checked + span {
+            background-color: $main;
+            border-radius: 133.884px; 
+            color: $white;
+        }
+    }
+}

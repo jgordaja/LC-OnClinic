@@ -1,0 +1,25 @@
+@mixin font($fw, $fs, $lh) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh; 
+}
+
+@mixin medium-font { 
+    font-size: 12px;
+    line-height: 14px; 
+}
+
+@mixin small-font { 
+    font-size: 12px;
+    line-height: 14px; 
+}
+
+@mixin transition($time) {
+    transition: all $time ease;
+}
+
+@mixin flex-space-between-align-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

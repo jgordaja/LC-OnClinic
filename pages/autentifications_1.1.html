@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/app.min.css">
+</head>
+<body> 
+    <header class="header">
+        <div class="header__container">
+            <nav class="header__nav">
+                <div class="nav__wrapper">
+                    <!-- <div class="header__burger burger" id="burger">
+                        <span class="burger__lines"></span>
+                    </div> -->
+                    <a href="#" class="header__logo">
+                        <img src="../svg/logo.svg" alt="logotype">
+                    </a>
+                </div> 
+                <ul class="header__menu menu">
+                    <li class="menu__item menu__item--active">
+                        <a href="#" class="menu__link">Мой кабинет</a>
+                    </li>
+                    <!-- <li class="menu__item">
+                        <a href="#" class="menu__link">Мои дети</a> 
+                    </li> -->
+                </ul>
+            </nav>
+            <div class="header__call_and_lang">
+                <!-- <div class="header__call">
+                    <a href="tel:08000000000" class="call_link">0 (800) <span>Показать номер</span></a>
+                    <button class="button button-olive">Обратный звонок</button>
+                </div> -->
+                <ul class="header__langs langs">
+                    <li class="langs__item">ua</li>
+                    <li class="langs__item langs__item--active">ru</li>
+                    <li class="langs__item">en</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="sidebar__mobile" id="sidebar__mobile">
+
+    </section>
+    <section class="cabinet_wrapper">
+        <!-- <aside class="sidebar">
+
+        </aside> -->
+        <section class="cabinet_content">
+            <main class="main">
+                <div class="authentications_wrapper"> 
+                    <!-- первый экран для мобильного, нажать кн Продолжить - отобразить второй экран -->
+                    <!-- <div class="onbording_mobile">
+                        <a href="#" class="back_to">На сайт On Clinic</a>
+                        <div class="onbording_mobile__wrapper pt-60">
+                            <h2 class="title pb-20">Добро пожаловать в кабинет пациента!</h2>
+                            <p class="info_content__paragraph pb-15">
+                                Онлайн-консультации врачей, назначенные лекарства, просмотр результатов исследований, и многое другое теперь доступно в вашем личном кабинете
+                            </p>
+                            <div class="info_content__img_wrapper pb-20">
+                                <img class="info_content__img" src="../svg/content/welkome-mobile.svg" alt="electronic cabinet drawing">
+                            </div> 
+                            <button class="button button-main form_button">Продолжить</button> 
+                        </div> 
+                    </div> -->
+                    <!-- форма регистрации + адаптив - второй экран для мобильного -->
+                    <div class="form_content"> 
+                        <a href="#" class="back_to">На сайт On Clinic</a>
+                        <div class="form_wrapper pt-60"> 
+                            <h2 class="title pb-30">Добро пожаловать в кабинет пациента!</h2>
+                            <form class="authentications_form pb-30">
+                                <div class="form_group_wrapper">
+                                    <label for="phone">Номер телефона с кодом страны</label>
+                                    <input id="phone" type="text" placeholder="Введите номер">
+                                </div> 
+                                <button type="submit" class="button form_button button-olive mt-30" disabled>Продолжить</button> 
+                            </form> 
+                        </div> 
+                    </div> 
+                    <div class="info_content">
+                        <div class="info_content__img_wrapper pb-20">
+                            <img class="info_content__img" src="../svg/content/welcome.svg" alt="electronic cabinet drawing">
+                        </div> 
+                        <p class="info_content__paragraph">
+                            Онлайн-консультации врачей, назначенные лекарства, просмотр результатов исследований, и многое другое теперь доступно в вашем личном кабинете
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer_content__wrapper">
+                    <p class="warning_text">
+                        Самолечение может быть опасным для вашего здоровья.
+                    </p>
+                    <a href="#" class="privacy_policy__link">
+                        Условия конфиденциальности
+                    </a>
+                </div> 
+            </footer> 
+        </section>
+    </section> 
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- menu-burger -->
+    <script src="../js/menu-burger.js"></script>
+</body>
+</html>
