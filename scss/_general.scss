@@ -130,7 +130,7 @@ button[disabled] {
         position: absolute;
         top: 0;
         left: -18px;
-        content: url('/svg/icons/phone.svg');
+        content: url('../svg/icons/phone.svg');
     }
 
     &:hover { 
@@ -163,7 +163,7 @@ button[disabled] {
 
     &::before {
         position: absolute;
-        content: url('/svg/icons/arrow-left.svg');
+        content: url('../svg/icons/arrow-left.svg');
         top: 0;
         left: 0; 
     }
@@ -186,7 +186,7 @@ button[disabled] {
 
     &::before {
         position: absolute;
-        content: url('/svg/icons/arrow-link.svg');
+        content: url('../svg/icons/arrow-link.svg');
         top: 0;
         left: 0; 
     }

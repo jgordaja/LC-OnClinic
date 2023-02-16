@@ -266,7 +266,7 @@ button[disabled] {
   position: absolute;
   top: 0;
   left: -18px;
-  content: url("/svg/icons/phone.svg");
+  content: url("../svg/icons/phone.svg");
 }
 .call_link:hover {
   -webkit-transform: scale(0.98);
@@ -310,7 +310,7 @@ button[disabled] {
 }
 .back_to::before {
   position: absolute;
-  content: url("/svg/icons/arrow-left.svg");
+  content: url("../svg/icons/arrow-left.svg");
   top: 0;
   left: 0;
 }
@@ -339,7 +339,7 @@ button[disabled] {
 }
 .back_link::before {
   position: absolute;
-  content: url("/svg/icons/arrow-link.svg");
+  content: url("../svg/icons/arrow-link.svg");
   top: 0;
   left: 0;
 }
