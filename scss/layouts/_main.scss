@@ -90,3 +90,118 @@
         }
     }
 }
+
+.cabinet_not_active__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    .cabinet_not_active {
+        @include flex-space-between-align-center;
+        margin: auto;
+
+        .cabinet_not_active__content {
+            max-width: 340px;
+            width: 100%;
+
+            .cabinet_not_active__title {
+                @include font(500, 18px, 21px);
+            }
+
+            .buttons_wrapper {
+                display: none;
+            }
+
+            .cabinet_not_active__paragraph {
+                @include font(400, 14px, 16px);
+            }
+        }
+
+        .cabinet_not_active__img {
+            max-width: 370px;
+            width: 100%
+        }
+
+        .confirmation {
+            .confirmation__link {
+                display: block;
+                background-color: $white;
+                max-width: 160px;
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+                border-radius: 5px;
+                @include transition(0.4s);
+
+                &:hover {
+                    transform: scale(0.9);
+                }
+            }
+
+            .confirmation__link + .confirmation__link {
+                margin-left: 10px;
+            }
+
+            .confirmation_icon__wrapper {
+                display: block;
+                margin: 0 auto;
+                width: 40px;
+                height: 40px;
+                background-color: $main;
+                border-radius: 50%;
+                position: relative;
+
+                .confirmation_icon { 
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    color: $white;
+                    font-size: 25px;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+.cabinet_not_active__wrapper .add_to_screen_block {
+    display: none;
+}
+
+.add_to_screen_block {
+    max-width: 360px;
+    margin: 0 auto;
+    background-color: $white;
+
+    .add_to_screen__wrapper {
+        padding: 25px 20px;
+        position: relative;
+
+        .close_button {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 25px;
+            right: 20px;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        .add_to_screen__wrapper_content {
+            display: flex;
+            align-items: center;
+        }
+
+        .add_to_screen__icon {
+            max-width: 51px;
+        }
+
+        .add_to_screen__text {
+            @include font(400, 14px, 16px); 
+            padding-left: 20px;
+            padding-right: 30px;
+        }
+    }
+}

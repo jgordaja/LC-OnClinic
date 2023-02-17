@@ -89,9 +89,21 @@
                                     <input id="phone" class="error" type="text" placeholder="Введите номер" value="678593838">
                                     <span class="error">Неверный формат телефона</span>
                                 </div>
+                                <!-- Поле со скрытым паролем -->
                                 <div class="form_group_wrapper">
                                     <label for="password">Пароль</label>
-                                    <input id="password" type="password" placeholder="Введите пароль">
+                                    <div class="password_wrapper">
+                                        <input id="password" class="password" type="password" placeholder="Введите пароль" value="123">
+                                        <img class="password_eye" src="/svg/icons/eye.svg" alt="icon eye">
+                                    </div> 
+                                </div>
+                                 <!-- Поле с видимым паролем -->
+                                 <div class="form_group_wrapper">
+                                    <label for="password">Пароль</label>
+                                    <div class="password_wrapper">
+                                        <input id="password" class="password" type="text" placeholder="Введите пароль" value="123">
+                                        <img class="password_eye" src="/svg/icons/eye-closed.svg" alt="icon eye">
+                                    </div> 
                                 </div>
                                 <div class="form_group_wrapper">
                                     <label for="password">Пароль</label>

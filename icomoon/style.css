@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?vqjtn4');
+  src:  url('fonts/icomoon.eot?vqjtn4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vqjtn4') format('truetype'),
+    url('fonts/icomoon.woff?vqjtn4') format('woff'),
+    url('fonts/icomoon.svg?vqjtn4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-danger-alert:before {
+  content: "\e900";
+}
+.icon-calendar:before {
+  content: "\e901";
+}
+.icon-file-text:before {
+  content: "\e902";
+}
+.icon-status-error:before {
+  content: "\e903";
+}
+.icon-status-success:before {
+  content: "\e904";
+}
+.icon-exclude:before {
+  content: "\e905";
+}
+.icon-location-point:before {
+  content: "\e906";
+}
+.icon-microphone:before {
+  content: "\e907";
+}
+.icon-user:before {
+  content: "\e908";
+}
+.icon-setting:before {
+  content: "\e909";
+}
+.icon-file-text-clean:before {
+  content: "\e90a";
+}
+.icon-call-off:before {
+  content: "\e90b";
+}
+.icon-camera-off:before {
+  content: "\e90c";
+}
+.icon-microphone-off:before {
+  content: "\e90d";
+}
+.icon-list:before {
+  content: "\e90e";
+}
+.icon-time:before {
+  content: "\e90f";
+}
+.icon-perscription:before {
+  content: "\e910";
+}
+.icon-home:before {
+  content: "\e911";
+}
+.icon-user-fill:before {
+  content: "\e912";
+}
+.icon-alert:before {
+  content: "\e913";
+}
+.icon-camera:before {
+  content: "\e914";
+}
+.icon-envelope:before {
+  content: "\e915";
+}
+.icon-telegram-plane:before {
+  content: "\e916";
+}
+.icon-info:before {
+  content: "\e917";
+}
+.icon-money:before {
+  content: "\e918";
+}
+.icon-notification:before {
+  content: "\e919";
+}
+.icon-file-text-plus:before {
+  content: "\e91a";
+}
+.icon-call:before {
+  content: "\e91b";
+}
+.icon-on-clinic:before {
+  content: "\e91c";
+}
+.icon-newspaper:before {
+  content: "\e91d";
+}
+.icon-phone:before {
+  content: "\e91e";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}

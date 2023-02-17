@@ -6,3 +6,29 @@
     width: 224px; 
     z-index: 1;
 }
+
+.sidebar__mobile {
+    position: fixed; 
+    overflow: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: $white; 
+    left: 0;
+    top: 49.7px;
+    bottom: 0;
+    width: 85%;
+    padding: 20px; 
+    box-sizing: border-box;
+    z-index: 1; 
+    @include transition(0.8s);
+    transform: translateX(-100%);
+
+    &.active {
+        transform: translateX(0%);
+        -webkit-box-shadow: 140px 1px 11px 0px rgba(84,92,135,1);
+        -moz-box-shadow: 140px 1px 11px 0px rgba(84,92,135,1);
+        box-shadow: 140px 1px 11px 0px rgba(84,92,135,1);
+    }
+}

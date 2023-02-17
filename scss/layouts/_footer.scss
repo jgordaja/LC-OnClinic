@@ -23,4 +23,53 @@
             }
         } 
     }
-  }
+ }
+
+ .footer_mobile {
+    display: none;
+    width: 100%;
+    background-color: $white; 
+
+    .footer_mobile__menu {
+        @include flex-space-between-align-center; 
+        padding: 10px 15px;
+
+        .menu__link {
+            @include font($font-weight-regular, $tiny-font-size, 14px);
+        }
+
+        .footer_mobile__icon {
+            display: block;
+            margin: 0 auto 5px auto;
+            width: fit-content;
+            color: $mobile-footer-icons; 
+            font-size: 24px;
+            @include transition(0.6s);
+        }
+
+        .menu__item {
+            @include transition(0.6s);
+
+            &:hover:not(.menu__item--disable) {
+                transform: scale(1.1);
+
+                .footer_mobile__icon {
+                    color: $mobile-footer-icons-active;
+                }
+            }
+
+            &--active {
+                .footer_mobile__icon {
+                    color: $mobile-footer-icons-active;
+                } 
+            }
+
+            &--disable {
+                .footer_mobile__icon,
+                .menu__link {
+                    color: $mobile-footer-icons-disable;
+                } 
+            }
+        }
+    }
+ }
