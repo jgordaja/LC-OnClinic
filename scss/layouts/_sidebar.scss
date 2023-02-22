@@ -4,7 +4,6 @@
     overflow: auto;
     flex-shrink: 0;
     width: 224px; 
-    z-index: 1;
     height: calc(100vh - 50px);
     position: fixed;
     z-index: 1;
@@ -38,13 +37,12 @@
         position: relative;
         
         .menu_icon__wrapper {
+            position: relative;
             display: inline-block;
             width: 24px;
             height: 24px;
-            border-radius: 50%;
-            position: relative;
-            margin-right: 10px;
-            position: relative;
+            border-radius: 50%; 
+            margin-right: 10px; 
 
             &.mark::after {
                 position: absolute;
@@ -85,8 +83,7 @@
                 position: absolute;
                 content: '';
                 top: calc(50% - 6px/2);
-                right: 4px;
-                transform: translateY(-50%);
+                right: 4px; 
                 width: 6px;
                 height: 6px; 
                 transform: rotate(-45deg);
@@ -263,8 +260,7 @@
                 position: absolute;
                 content: '';
                 top: calc(50% - 6px/2);
-                left: 4px;
-                transform: translateY(-50%);
+                left: 4px; 
                 width: 6px;
                 height: 6px; 
                 transform: rotate(-45deg);

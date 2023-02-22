@@ -55,11 +55,14 @@
 
         .cabinet_content { 
             min-height: calc(100vh - 55.46px); 
-            margin-left: 0; 
 
             .my_cabinet {
                 margin-right: 0;
             }
+        }
+
+        .content__my_cabinet {
+            margin-left: 0; 
         }
     }
 

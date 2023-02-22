@@ -1074,7 +1074,6 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 224px;
-  z-index: 1;
   height: calc(100vh - 50px);
   position: fixed;
   z-index: 1;
@@ -1127,13 +1126,12 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   position: relative;
 }
 .sidebar_menu .sidebar_menu__link .menu_icon__wrapper {
+  position: relative;
   display: inline-block;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  position: relative;
   margin-right: 10px;
-  position: relative;
 }
 .sidebar_menu .sidebar_menu__link .menu_icon__wrapper.mark::after {
   position: absolute;
@@ -1170,9 +1168,6 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   content: "";
   top: calc(50% - 3px);
   right: 4px;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
   width: 6px;
   height: 6px;
   -webkit-transform: rotate(-45deg);
@@ -1360,9 +1355,6 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   content: "";
   top: calc(50% - 3px);
   left: 4px;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
   width: 6px;
   height: 6px;
   -webkit-transform: rotate(-45deg);
@@ -1400,7 +1392,6 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  margin-left: 224px;
 }
 .cabinet_wrapper .cabinet_content .my_cabinet {
   margin-right: 320px;
@@ -1409,6 +1400,9 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+.cabinet_wrapper .content__my_cabinet {
+  margin-left: 224px;
 }
 
 .info_content__paragraph {
@@ -1694,10 +1688,12 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   }
   .cabinet_wrapper .cabinet_content {
     min-height: calc(100vh - 55.46px);
-    margin-left: 0;
   }
   .cabinet_wrapper .cabinet_content .my_cabinet {
     margin-right: 0;
+  }
+  .cabinet_wrapper .content__my_cabinet {
+    margin-left: 0;
   }
   .authentications_wrapper {
     display: block;
