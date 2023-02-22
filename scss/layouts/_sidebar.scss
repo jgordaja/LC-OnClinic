@@ -5,12 +5,154 @@
     flex-shrink: 0;
     width: 224px; 
     z-index: 1;
+    height: calc(100vh - 50px);
+    position: fixed;
+    z-index: 1;
+
+    .buttons_wrapper {
+        .button {
+            @include font(600, 14px, 16px);
+        }
+    }
+}
+
+.sidebar__wrapper {
+    @include flex-space-between-align-start; 
+    flex-direction: column;
+    height: 100%; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .sidebar__nav {
+        width: 100%;
+    }
+}
+
+.sidebar_menu {
+    @include font(400, 14px, 16px);
+
+    .sidebar_menu__link {
+        width: 100%; 
+        @include flex-flex-start-align-center; 
+        position: relative;
+        
+        .menu_icon__wrapper {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 10px;
+            position: relative;
+
+            &.mark::after {
+                position: absolute;
+                content: '';
+                top: -3px;
+                right: -3px;
+                width: 11px;
+                height: 11px;
+                background-color: $mark;
+                border-radius: 50%;
+            }
+        }
+
+        .menu_icon {
+            color: $white;
+            font-size: 14px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .sidebar_menu__item {
+        padding: 15px 0;
+        border-bottom: 1px solid $blue; 
+
+        &:nth-child(odd) .menu_icon__wrapper {
+            background-color: $main;
+        } 
+
+        &:nth-child(even) .menu_icon__wrapper {
+            background-color: $secondery;
+        } 
+
+        .sidebar_menu__link--arrow { 
+            &::after {
+                position: absolute;
+                content: '';
+                top: calc(50% - 6px/2);
+                right: 4px;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px; 
+                transform: rotate(-45deg);
+                border-top: none;
+                border-left: none;
+                border-right: 2px solid $blue;
+                border-bottom: 2px solid $blue;
+                @include transition(0.4s);
+            }
+        }
+
+        &:hover { 
+            background-color: $light-blue;
+
+            .sidebar_menu__link--arrow::after {
+                border-right: 3px solid $blue;
+                border-bottom: 3px solid $blue;
+            }
+
+            .sidebar_menu__link--arrow_back::after {
+                border-left: 3px solid $blue;
+                border-top: 3px solid $blue;
+            }
+        } 
+
+        .sidebar_submenu { 
+            position: fixed; 
+            top: 50px;
+            left: 224px; 
+            background-color: $white;
+            max-width: 235px;
+            width: 100%;
+            height: calc(100vh - 50px - 64px); 
+            padding-left: 15px;
+            padding-right: 15px;
+            border-left: 2px solid $bg;
+            overflow: auto; 
+            transition: transform 0.8s ease, opacity 1s;
+            transform: translateX(-200%);  
+            z-index: -1;
+            opacity: 0; 
+
+            &.active {
+                transform: translateX(0);  
+                z-index: 1;
+                opacity: 1;
+            }
+
+            .sidebar_menu__item {
+                &:nth-child(odd) .menu_icon__wrapper {
+                    background-color: $main;
+                } 
+        
+                &:nth-child(even) .menu_icon__wrapper {
+                    background-color: $secondery;
+                } 
+            }
+        }
+    }
 }
 
 .sidebar__mobile {
+    // display: flex;
+    display: none;
     position: fixed; 
     overflow: auto; 
-    display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
@@ -19,7 +161,7 @@
     top: 49.7px;
     bottom: 0;
     width: 85%;
-    padding: 20px; 
+    padding: 0 20px; 
     box-sizing: border-box;
     z-index: 1; 
     @include transition(0.8s);
@@ -30,5 +172,113 @@
         -webkit-box-shadow: 140px 1px 11px 0px rgba(84,92,135,1);
         -moz-box-shadow: 140px 1px 11px 0px rgba(84,92,135,1);
         box-shadow: 140px 1px 11px 0px rgba(84,92,135,1);
+    }
+
+    .sidebar__wrapper {
+        max-width: 260px;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .buttons_wrapper {
+        .button {
+            @include font(500, 16px, 18px);
+        }
+    }
+
+    .sidebar_menu__item {
+        @include font(500, 16px, 18px);
+
+        .menu_icon__wrapper {
+            width: 30px;
+            height: 30px; 
+        }
+    }
+
+    .sidebar_mobile__call_and_lang {
+        text-align: center;
+        border-top: 1px solid $blue;
+    
+        .sidebar_mobile__call { 
+            padding-bottom: 35px;
+    
+            .button {
+                width: 100%;
+                @include font(500, 16px, 18px);
+            }
+    
+            .call_link { 
+                color: $main;
+
+                &::before { 
+                    content: url('../svg/icons/phone-main.svg');
+                }
+            }
+        }
+    }
+
+    .langs {
+        @include flex-center-align-center;
+
+        .langs__item:not(.langs__item:first-child) {
+            padding-left: 35px;
+        }
+    }
+
+    .sidebar__nav {
+        position: relative;
+    }
+
+    .sidebar_mobile_submenu { 
+        position: absolute; 
+        top: 0;
+        left: 0; 
+        background-color: $white; 
+        width: 100%;
+        height: 100%; 
+        overflow: auto; 
+        transition: opacity 0.3s ease; 
+        z-index: -1;
+        opacity: 0; 
+
+        &.active { 
+            z-index: 1;
+            opacity: 1;
+        }
+
+        .sidebar_menu__item {
+            &:nth-child(odd) .menu_icon__wrapper {
+                background-color: $main;
+            } 
+    
+            &:nth-child(even) .menu_icon__wrapper {
+                background-color: $secondery;
+            } 
+        }
+
+        .sidebar_menu__link--arrow_back {
+            justify-content: center;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: calc(50% - 6px/2);
+                left: 4px;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px; 
+                transform: rotate(-45deg);
+                border-bottom: none;
+                border-right: none;
+                border-left: 2px solid $blue;
+                border-top: 2px solid $blue;
+                @include transition(0.4s);
+            }
+
+            &:hover .sidebar_menu__link--arrow_back::after {
+                border-right: 3px solid $blue;
+                border-bottom: 3px solid $blue; 
+            }
+        }
     }
 }

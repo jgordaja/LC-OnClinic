@@ -23,9 +23,9 @@
                     <li class="menu__item menu__item--active">
                         <a href="#" class="menu__link">Мой кабинет</a>
                     </li>
-                    <!-- <li class="menu__item">
+                    <li class="menu__item">
                         <a href="#" class="menu__link">Мои дети</a> 
-                    </li> -->
+                    </li>
                 </ul>
             </nav>
             <div class="header__call_and_lang">
@@ -48,6 +48,38 @@
                     <li class="sidebar_menu__item">
                         <a href="#" class="sidebar_menu__link">
                             <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-folder-open"></span>
+                            </span> 
+                            Медицинская карта
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-file-text-plus"></span>
+                            </span> 
+                            Мои назначения
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper mark">
+                                <span class="menu_icon icon-notification"></span>
+                            </span> 
+                            Уведомления
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-money"></span>
+                            </span> 
+                            Задолженность
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper">
                                 <span class="menu_icon icon-user-fill"></span>
                             </span> 
                             Профиль
@@ -62,33 +94,52 @@
                         </a>
                     </li>
                     <li class="sidebar_menu__item">
-                        <a href="#" class="sidebar_menu__link">
+                        <a href="#" class="sidebar_menu__link sidebar_menu__link--arrow" id="burger_menu_info">
                             <span class="menu_icon__wrapper">
-                                <span class="menu_icon icon-newspaper"></span>
+                                <span class="menu_icon icon-info"></span>
                             </span> 
-                            Новости
+                            Дополнительно 
                         </a>
-                    </li>
-                    <li class="sidebar_menu__item">
-                        <a href="#" class="sidebar_menu__link">
-                            <span class="menu_icon__wrapper">
-                                <span class="menu_icon icon-call"></span>
-                            </span> 
-                            Контакты
-                        </a>
-                    </li>
-                    <li class="sidebar_menu__item">
-                        <a href="#" class="sidebar_menu__link">
-                            <span class="menu_icon__wrapper">
-                                <span class="menu_icon icon-on-clinic"></span>
-                            </span> 
-                            Сайт ОН Клиник
-                        </a>
+                        <ul class="sidebar_menu sidebar_mobile_submenu">
+                            <li class="sidebar_menu__item">
+                                <a href="#" class="sidebar_menu__link sidebar_menu__link--arrow_back" id="close_burger_menu_info">
+                                    <span class="menu_icon__wrapper">
+                                        <span class="menu_icon icon-info"></span>
+                                    </span> 
+                                    Дополнительно 
+                                </a>
+                            </li>
+                            <li class="sidebar_menu__item">
+                                <a href="#" class="sidebar_menu__link">
+                                    <span class="menu_icon__wrapper">
+                                        <span class="menu_icon icon-newspaper"></span>
+                                    </span> 
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="sidebar_menu__item">
+                                <a href="#" class="sidebar_menu__link">
+                                    <span class="menu_icon__wrapper">
+                                        <span class="menu_icon icon-call"></span>
+                                    </span> 
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="sidebar_menu__item">
+                                <a href="#" class="sidebar_menu__link">
+                                    <span class="menu_icon__wrapper">
+                                        <span class="menu_icon icon-on-clinic"></span>
+                                    </span> 
+                                    Сайт ОН Клиник
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
             <div class="buttons_wrapper pb-30">
                 <button class="button button-main mb-15">Запись на прием</button>
+                <button class="button button-olive mb-15">Видео-консультация</button>
                 <button class="button button-olive-white mb-30">Оставить отзыв</button> 
                 <div class="sidebar_mobile__call_and_lang pt-30">
                     <div class="sidebar_mobile__call">
@@ -105,10 +156,42 @@
         </div>
     </section>
     <section class="cabinet_wrapper">
-        <aside class="sidebar_not_active sidebar">
+        <aside class="sidebar_my_cabinet sidebar">
             <div class="sidebar__wrapper">
                 <nav class="sidebar__nav pb-30">
                     <ul class="sidebar_menu">
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-folder-open"></span>
+                                </span> 
+                                Медицинская карта 
+                            </a>
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-file-text-plus"></span>
+                                </span> 
+                                Мои назначения
+                            </a>
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper mark">
+                                    <span class="menu_icon icon-notification"></span>
+                                </span> 
+                                Уведомления
+                            </a>
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-money"></span>
+                                </span> 
+                                Задолженность 
+                            </a>
+                        </li>
                         <li class="sidebar_menu__item">
                             <a href="#" class="sidebar_menu__link">
                                 <span class="menu_icon__wrapper">
@@ -123,91 +206,65 @@
                                     <span class="menu_icon icon-cite"></span>
                                 </span> 
                                 Мои отзывы
-                            </a>
+                            </a> 
                         </li>
                         <li class="sidebar_menu__item">
-                            <a href="#" class="sidebar_menu__link">
+                            <a href="#" class="sidebar_menu__link sidebar_menu__link--arrow" id="menu_info">
                                 <span class="menu_icon__wrapper">
-                                    <span class="menu_icon icon-newspaper"></span>
+                                    <span class="menu_icon icon-info"></span>
                                 </span> 
-                                Новости
+                                Дополнительно
                             </a>
-                        </li>
-                        <li class="sidebar_menu__item">
-                            <a href="#" class="sidebar_menu__link">
-                                <span class="menu_icon__wrapper">
-                                    <span class="menu_icon icon-call"></span>
-                                </span> 
-                                Контакты
-                            </a>
-                        </li>
-                        <li class="sidebar_menu__item">
-                            <a href="#" class="sidebar_menu__link">
-                                <span class="menu_icon__wrapper">
-                                    <span class="menu_icon icon-on-clinic"></span>
-                                </span> 
-                                Сайт ОН Клиник
-                            </a>
+                            <ul class="sidebar_menu sidebar_submenu">
+                                <li class="sidebar_menu__item">
+                                    <a href="#" class="sidebar_menu__link">
+                                        <span class="menu_icon__wrapper">
+                                            <span class="menu_icon icon-newspaper"></span>
+                                        </span> 
+                                        Новости
+                                    </a>
+                                </li>
+                                <li class="sidebar_menu__item">
+                                    <a href="#" class="sidebar_menu__link">
+                                        <span class="menu_icon__wrapper">
+                                            <span class="menu_icon icon-call"></span>
+                                        </span> 
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="sidebar_menu__item">
+                                    <a href="#" class="sidebar_menu__link">
+                                        <span class="menu_icon__wrapper">
+                                            <span class="menu_icon icon-on-clinic"></span>
+                                        </span> 
+                                        Сайт ОН Клиник
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
-                <div class="buttons_wrapper pb-45">
+                <div class="buttons_wrapper  pb-45">
                     <button class="button button-main mb-15">Запись на прием</button>
+                    <button class="button button-olive mb-15">Видео-консультация</button>
                     <button class="button button-olive-white">Оставить отзыв</button>
                 </div> 
             </div>
         </aside>
+        <!-- Панель с календарем и ивентами -->
+        <aside class="calendar__wrapper"> 
+
+        </aside>
         <section class="cabinet_content">
             <main class="main">
-                <!-- Контент для неактивного аккаунта -->
-                <div class="cabinet_not_active__wrapper"> 
-                    <div class="cabinet_not_active">
-                        <div class="cabinet_not_active__content">
-                            <h2 class="cabinet_not_active__title pb-20">Здравствуйте, Валерий!</h2>
-                            <p class="cabinet_not_active__paragraph pb-20">
-                                Для полного доступа к функциям личного кабинета необходимо подтверждение личности. Для этого, пришлите фото вашего паспорта в Telegram или на Е-mail.
-                            </p>
-                            <div class="confirmation flex pb-25">
-                                <a href="#" class="confirmation__link">
-                                    <span class="confirmation_icon__wrapper">
-                                        <span class="confirmation_icon icon-telegram-plane"></span>
-                                    </span> 
-                                    Теlegram
-                                </a>
-                                <a href="#" class="confirmation__link">
-                                    <span class="confirmation_icon__wrapper">
-                                        <span class="confirmation_icon icon-envelope"></span>
-                                    </span> 
-                                    E-mail
-                                </a>
-                            </div>
-                            <p class="cabinet_not_active__paragraph">
-                                Также Вы можете получить полный доступ у администратора регистратуры при следующем визите в клинику
-                            </p>
-                            <div class="buttons_wrapper pt-25">
-                                <button class="button button-main mb-10">Записаться на прием</button>
-                                <button class="button button-white">Оставить отзыв</button>
-                            </div> 
-                        </div>
-                        <div class="cabinet_not_active__img pl-25">
-                            <img src="../svg/content/my-cabinet.svg" alt="personal account drawing">
-                        </div>
-                    </div>
-                    <div class="add_to_screen_block">
-                        <div class="add_to_screen__wrapper">
-                            <img class="close_button" src="/svg/icons/close.svg" alt="close button">
-                            <div class="add_to_screen__wrapper_content">
-                                <img class="add_to_screen__icon" src="../svg/icons/on-clinic.svg" alt="On Clinic icon">
-                                <p class="add_to_screen__text">Добавьте личный кабинет на главный экран и храните все записи всегда под рукой!</p>
-                            </div> 
-                            <div class="buttons_wrapper">
-                                <button class="button button-olive mt-10">Добавить</button>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <!-- end Контент для неактивного аккаунта -->
-            </main>
+                <!-- Контент для Мой кабинет -->
+                <section class="my_cabinet"> 
+                    <div class="my_cabinet__wrapper"> 
+
+                    </div> 
+                </section>
+                <!-- end Контент для Мой кабинет -->
+            </main> 
             <footer class="footer">
                 <div class="footer_content__wrapper">
                     <p class="warning_text">
@@ -248,12 +305,14 @@
                     </ul>
                 </nav>
             </footer>
-        </section>
+        </section> 
     </section> 
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- menu-burger -->
     <script src="../js/menu-burger.js"></script>
+    <!-- sidebar -->
+    <script src="../js/sidebar.js"></script>
 </body>
 </html>

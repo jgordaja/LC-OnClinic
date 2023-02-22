@@ -1,12 +1,18 @@
 .cabinet_wrapper { 
     display: flex; 
     margin-top: 49.7px; 
+    position: relative;
 
     .cabinet_content { 
         min-height: calc(100vh - 49.67px);
         display: flex;
         flex-direction: column; 
         flex: 1 1  auto;
+        margin-left: 224px; 
+
+        .my_cabinet {
+            margin-right: 320px;
+        }
 
         .main { 
             flex: 1 1 auto; 
@@ -204,4 +210,25 @@
             padding-right: 30px;
         }
     }
+}
+
+.my_cabinet {
+    position: relative; 
+
+    .my_cabinet__wrapper {
+
+    }
+}
+
+.calendar__wrapper { 
+    position: fixed; 
+    height: 100%;
+    width: 320px;
+    background-color: $white;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    overflow: auto;
+    padding-bottom: 64px;
+    padding-top: 50px;
 }

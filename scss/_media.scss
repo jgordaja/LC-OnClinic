@@ -16,6 +16,7 @@
     }
 
     .sidebar__mobile {
+        display: flex;
         top: 55px;
     }
 
@@ -54,6 +55,11 @@
 
         .cabinet_content { 
             min-height: calc(100vh - 55.46px); 
+            margin-left: 0; 
+
+            .my_cabinet {
+                margin-right: 0;
+            }
         }
     }
 
@@ -105,5 +111,9 @@
         .add_to_screen_block {
             display: block;
         }
+    }
+
+    .calendar__wrapper {
+        display: none;
     }
 }

@@ -9,6 +9,19 @@ $(document).ready(function() {
         $('body').toggleClass('lock');
     })
 
+    // Для кожного пункту меню, який матиме своє підменю, 
+    // потрібно для посилання задати id
+    // щоб відкривати саме потрібне підменю 
+    $('#close_burger_menu_info').click(function() { 
+        // закрити підменю
+        $('#close_burger_menu_info').parent().parent().removeClass('active'); 
+    })
+
+    $('#burger_menu_info').click(function() { 
+        // відкрити потрібне підменю
+        $('#burger_menu_info').next().addClass('active'); 
+    })
+
     // якщо нажато пункт меню
     // $('.menu__item').click(function() {
     //     // переходимо кудись або ще якийсь код
@@ -20,4 +33,6 @@ $(document).ready(function() {
     //     // прибрати lock-клас у body
     //     $('body').toggleClass('lock');
     // })
+
+
 });
