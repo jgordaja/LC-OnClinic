@@ -30,6 +30,12 @@
     align-items: flex-start;
 }
 
+@mixin flex-space-between-align-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 @mixin flex-flex-start-align-center {
     display: flex;
     justify-content: flex-start;

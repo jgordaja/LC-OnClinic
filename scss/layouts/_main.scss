@@ -215,23 +215,161 @@
     }
 }
 
+.cabinet__title {
+    @include font(500, 18px, 21px);
+}
+
+.cabinet__paragraph {
+    @include font(400, 14px, 16px);
+}
+
 .my_cabinet {
     position: relative; 
 
     .my_cabinet__wrapper {
+        max-width: 702px;
+        width: 100%;
+        padding: 30px 15px;
+        margin: 0 auto;
+    }
+} 
 
+.patient_info {
+    @include flex-flex-start-align-center;
+
+    .patient_info__avatar {
+        position: relative;
+        width: 46px; 
+        border-radius: 50%;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%; 
+            transform: translate(-50%, -50%); 
+            object-fit: cover; 
+            object-position: center;
+        }
     }
 }
 
-.calendar__wrapper { 
-    position: fixed; 
-    height: 100%;
-    width: 320px;
-    background-color: $white;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    overflow: auto;
-    padding-bottom: 64px;
-    padding-top: 50px;
+.reminders {
+    .reminder_item {
+        background-color: $white;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+        padding: 10px 25px 10px 20px;
+        @include flex-space-between-align-start; 
+
+        .reminder_item__block {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: -10px;
+                width: 5px;
+                height: 100%;
+                transform: translateY(-50%);
+                background-color: $main;
+                border-radius: 4px;
+            }
+
+            .reminder_item__title {
+                @include font(500, 14px, 16px);
+                margin-bottom: 5px;
+            }
+
+            .reminder_item__text {
+                @include font(400, 12px, 14px);
+                max-width: 400px;
+            }
+        }
+
+        .reminder_item__time {
+                @include font(400, 14px, 16px);
+                color: #B7B7B7;
+        }
+    }
 }
+
+.block_medical_cards {
+
+    .block_medical_cards__header.medical_cards {
+        @include flex-space-between-align-end;
+
+        .medical_cards__title {
+            @include font(500, 18px, 21px);
+        }
+
+        .medical_cards__button {
+            max-width: 90px;
+            width: 100%;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+    .block_medical_cards__footer {
+        max-width: 210px;
+        width: 1005;
+
+        button {
+            width: 100%;
+            @include font(500, 16px, 19px);
+        }
+    }
+}
+
+// .confirmation {
+//     .confirmation__link {
+//         display: block;
+//         background-color: $white;
+//         max-width: 160px;
+//         width: 100%;
+//         text-align: center;
+//         padding: 15px 0;
+//         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+//         border-radius: 5px;
+//         @include transition(0.4s);
+
+//         &:hover {
+//             transform: scale(0.9);
+//         }
+//     }
+
+//     .confirmation__link + .confirmation__link {
+//         margin-left: 10px;
+//     }
+
+//     .confirmation_icon__wrapper {
+//         display: block;
+//         margin: 0 auto;
+//         width: 40px;
+//         height: 40px;
+//         background-color: $main;
+//         border-radius: 50%;
+//         position: relative;
+
+//         .confirmation_icon { 
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             color: $white;
+//             font-size: 25px;
+//             transform: translate(-50%, -50%);
+//         }
+//     }
+// }

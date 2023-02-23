@@ -1373,6 +1373,19 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   border-bottom: 3px solid #BEE8FF;
 }
 
+.calendar__wrapper {
+  position: fixed;
+  height: 100%;
+  width: 320px;
+  background-color: #FFFFFF;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  overflow: auto;
+  padding-bottom: 64px;
+  padding-top: 50px;
+}
+
 .cabinet_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1620,20 +1633,148 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   padding-right: 30px;
 }
 
+.cabinet__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.cabinet__paragraph {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .my_cabinet {
   position: relative;
 }
-.calendar__wrapper {
-  position: fixed;
+.my_cabinet .my_cabinet__wrapper {
+  max-width: 702px;
+  width: 100%;
+  padding: 30px 15px;
+  margin: 0 auto;
+}
+
+.patient_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.patient_info .patient_info__avatar {
+  position: relative;
+  width: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.patient_info .patient_info__avatar::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.patient_info .patient_info__avatar img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
   height: 100%;
-  width: 320px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.reminders .reminder_item {
   background-color: #FFFFFF;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  overflow: auto;
-  padding-bottom: 64px;
-  padding-top: 50px;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  padding: 10px 25px 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.reminders .reminder_item .reminder_item__block {
+  position: relative;
+}
+.reminders .reminder_item .reminder_item__block::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -10px;
+  width: 5px;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #1B6EBE;
+  border-radius: 4px;
+}
+.reminders .reminder_item .reminder_item__block .reminder_item__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+.reminders .reminder_item .reminder_item__block .reminder_item__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  max-width: 400px;
+}
+.reminders .reminder_item .reminder_item__time {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #B7B7B7;
+}
+
+.block_medical_cards .block_medical_cards__header.medical_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.block_medical_cards .block_medical_cards__header.medical_cards .medical_cards__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+.block_medical_cards .block_medical_cards__header.medical_cards .medical_cards__button {
+  max-width: 90px;
+  width: 100%;
+}
+.block_medical_cards .block_medical_cards__header.medical_cards .medical_cards__button button {
+  width: 100%;
+}
+.block_medical_cards .block_medical_cards__footer {
+  max-width: 210px;
+  width: 1005;
+}
+.block_medical_cards .block_medical_cards__footer button {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 @media screen and (max-width: 992px) {

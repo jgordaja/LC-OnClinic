@@ -1,0 +1,13 @@
+
+.calendar__wrapper { 
+    position: fixed; 
+    height: 100%;
+    width: 320px;
+    background-color: $white;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    overflow: auto;
+    padding-bottom: 64px;
+    padding-top: 50px;
+}
