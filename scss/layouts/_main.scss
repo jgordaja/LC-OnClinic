@@ -120,6 +120,8 @@
 
             .buttons_wrapper {
                 display: none;
+                max-width: 320px;
+                margin: 0 auto;
             }
 
             .cabinet_not_active__paragraph {
@@ -133,6 +135,9 @@
         }
 
         .confirmation {
+            max-width: 340px;
+            margin: 0 auto;
+
             .confirmation__link {
                 display: block;
                 background-color: $white;
@@ -175,13 +180,11 @@
     }
 }
 
-.cabinet_not_active__wrapper .add_to_screen_block {
-    display: none;
-}
-
 .add_to_screen_block {
-    max-width: 360px;
-    margin: 0 auto;
+    display: none;
+    max-width: 702px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: $white;
 
     .add_to_screen__wrapper {
@@ -212,6 +215,12 @@
             padding-left: 20px;
             padding-right: 30px;
         }
+
+        .buttons_wrapper {
+            margin: 10px auto 0 auto;
+            max-width: 320px;
+            width: 100%;
+        }
     }
 }
 
@@ -228,9 +237,14 @@
 
     .my_cabinet__wrapper {
         max-width: 702px;
-        width: 100%;
-        padding: 30px 15px;
-        margin: 0 auto;
+        width: 100%; 
+        padding: 0 15px;
+        margin: 30px auto 40px auto;
+
+        .events__title {
+            @include font(500, 16px, 18px);
+            margin-bottom: 20px
+        }
     }
 } 
 
@@ -263,6 +277,8 @@
 }
 
 .reminders {
+    margin-bottom: 50px;
+
     .reminder_item {
         background-color: $white;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
@@ -303,26 +319,92 @@
     }
 }
 
-.block_medical_cards {
+.medical_cards { 
+    @include flex-flex-start-align-center; 
+    flex-wrap: wrap; 
+}
 
-    .block_medical_cards__header.medical_cards {
+.medical_cards, .medical_cards__modile {
+    .medical_cards__item { 
+        position: relative;
+        @include transition(0.4s);
+
+        .card__info {
+            position: absolute;
+            left: 15px;
+            bottom: 15px; 
+
+            .card__datetime {
+                position: relative;
+                display: inline-block; 
+                @include font(500, 12px, 18px);
+                padding: 5px 20px 5px 30px;
+                background-color: #F6F5FA;
+                border-radius: 100px;
+                margin-bottom: 8px;
+
+                .card__datetime_icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 6px;
+                    transform: translateY(-50%);
+                    padding-right: 7px;
+                    font-size: 18px;
+                    color: $main;
+                }
+            }
+
+            .card__name {
+                @include font(500, 18px, 21px); 
+                max-width: 180px;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.general_medical_cards {
+    margin-bottom: 50px;
+
+    .general_medical_cards__header {
         @include flex-space-between-align-end;
 
-        .medical_cards__title {
+        .general_medical_cards__title {
             @include font(500, 18px, 21px);
         }
 
-        .medical_cards__button {
+        .general_medical_cards__button {
             max-width: 90px;
             width: 100%;
 
             button {
                 width: 100%;
+                @include font(500, 14px, 16px);
             }
         }
     }
 
-    .block_medical_cards__footer {
+    .medical_cards { 
+        margin-bottom: 20px;
+
+        .medical_cards__item { 
+            max-width: 220px;
+            padding-right: 20px; 
+        }
+    }
+
+    .medical_cards__modile {
+        display: none;
+    }
+
+    .general_medical_cards__footer {
         max-width: 210px;
         width: 1005;
 
@@ -331,45 +413,119 @@
             @include font(500, 16px, 19px);
         }
     }
+
+    .general_medical_cards__footer_mobile {
+        display: none;
+        max-width: 320px;
+        width: 100%; 
+
+        button {
+            @include font(600, 16px, 18px);
+        }
+    }
 }
 
-// .confirmation {
-//     .confirmation__link {
-//         display: block;
-//         background-color: $white;
-//         max-width: 160px;
-//         width: 100%;
-//         text-align: center;
-//         padding: 15px 0;
-//         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
-//         border-radius: 5px;
-//         @include transition(0.4s);
+.transition_to_sections {
+    margin-bottom: 50px;
 
-//         &:hover {
-//             transform: scale(0.9);
-//         }
-//     }
+    .transition_to_sections__link {
+        @include flex-flex-start-align-center; 
+        align-self: stretch;
+        background-color: $white; 
+        width: 100%; 
+        padding: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+        border-radius: 5px;
+        @include transition(0.4s); 
 
-//     .confirmation__link + .confirmation__link {
-//         margin-left: 10px;
-//     }
+        &:hover {
+            transform: scale(0.9);
+        }
 
-//     .confirmation_icon__wrapper {
-//         display: block;
-//         margin: 0 auto;
-//         width: 40px;
-//         height: 40px;
-//         background-color: $main;
-//         border-radius: 50%;
-//         position: relative;
+        &:nth-child(odd) .transition_to_sections__icon_wrapper {
+            background-color: $secondery;
+        }
 
-//         .confirmation_icon { 
-//             position: absolute;
-//             top: 50%;
-//             left: 50%;
-//             color: $white;
-//             font-size: 25px;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-// }
+        &:nth-of-type(even) .transition_to_sections__icon_wrapper {
+            background-color: $main;
+        }
+    }
+
+    .transition_to_sections__link + .transition_to_sections__link {
+        margin-left: 35px;
+    }
+
+    .transition_to_sections__description {
+        margin-left: 15px;
+
+        .transition_to_sections__name {
+            display: block;
+            @include font(500, 16px, 18px);
+            margin-bottom: 5px;
+        }
+    
+        .transition_to_sections__text {
+            @include font(400, 12px, 14px);
+        }
+    }
+
+    .transition_to_sections__icon_wrapper {
+        position: relative;
+        display: block; 
+        max-width: 40px;
+        width: 100%;
+        max-height: 40px; 
+        height: 100%;
+        border-radius: 50%; 
+
+        .transition_to_sections__icon { 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: $white;
+            font-size: 25px;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.info_block {
+    @include flex-space-between-align-center;
+    padding: 25px 25px 20px 25px;
+    background-color: $white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;   
+    
+    .info_block__info {
+        .info_block__title {
+            @include font(600, 18px, 21px);
+            margin-bottom: 10px
+        }
+
+        .info_block__description {
+            @include font(400, 14px, 16px);
+            margin-bottom: 20px;
+        }
+
+        .info_block__button {
+            max-width: 190px;
+            width: 100%;
+            @include font(600, 14px, 16px);
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+    .info_block__img {
+        max-width: 190px;
+        width: 100%;
+        padding-left: 15px;
+    }
+} 
+
+
+.mobile__events {
+    display: none;
+}

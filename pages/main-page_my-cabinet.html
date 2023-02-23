@@ -253,8 +253,43 @@
         </aside>
         <!-- Панель с календарем и ивентами -->
         <aside class="calendar__wrapper"> 
-
+            <div class="calendar__container">
+                <div class="calendar">
+                    <!-- муляж, здесь будет компонент -->
+                    <img src="../img/calendar.jpg" alt="calendar">
+                </div>
+                <div class="events">
+                    <div class="events_on_date">
+                        <span class="events_on_date__date">18 января</span>
+                        <div class="events__item event">
+                            <div class="event__inner">
+                                <div class="event__text">Общий анализ крови</div>
+                                <div class="event__time">09:00</div>
+                            </div>
+                            <div class="event__alert">
+                                <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
+                            </div>
+                        </div>
+                        <div class="events__item event">
+                            <div class="event__inner">
+                                <div class="event__text">Компьютерная томография</div>
+                                <div class="event__time">10:00</div>
+                            </div> 
+                        </div>
+                        <div class="events__item event">
+                            <div class="event__inner">
+                                <div class="event__text">Видео-консультация гастроентеролога</div>
+                                <div class="event__time">
+                                    <span class="event__time_icon icon-camera"></span>
+                                    10:00
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </aside>
+        <!-- end Панель с календарем и ивентами -->
         <section class="cabinet_content content__my_cabinet">
             <main class="main">
                 <!-- Контент для Мой кабинет -->
@@ -272,7 +307,7 @@
                                 </p>
                             </div> 
                         </div>
-                        <div class="reminders mb-50">
+                        <div class="reminders">
                             <div class="reminder_item mb-10">
                                 <div class="reminder_item__block">
                                     <h4 class="reminder_item__title">Близится прием к врачу!</h4>
@@ -283,22 +318,175 @@
                                 <span class="reminder_item__time">09:06</span>
                             </div> 
                         </div>
-                        <div class="block_medical_cards mb-50">
-                            <div class="block_medical_cards__header medical_cards mb-20">
-                                <h3 class="medical_cards__title">Медицинская карта</h3>
-                                <div class="medical_cards__button">
+                        <div class="general_medical_cards">
+                            <div class="general_medical_cards__header mb-20">
+                                <h3 class="general_medical_cards__title">Медицинская карта</h3>
+                                <div class="general_medical_cards__button">
                                     <button class="button button-white">Больше</button>
                                 </div>
                             </div>
-                            <div class="block_medical_cards__cards mb-20">
-
+                            <div class="medical_cards">
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info">
+                                        <span class="card__datetime">
+                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
+                                        </span>
+                                        <span class="card__name">Гастроентерология</span>
+                                    </span> 
+                                </a>
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info">
+                                        <span class="card__datetime">
+                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
+                                        </span>
+                                        <span class="card__name">Пульмонология</span>
+                                    </span> 
+                                </a>
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info"> 
+                                        <span class="card__name">Проктология</span>
+                                    </span> 
+                                </a>
                             </div>
-                            <div class="block_medical_cards__footer">
+                            <!-- Мед карты для мобильной версии -->
+                            <!-- Здесь будет слайдер -->
+                            <div class="medical_cards__modile">
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info">
+                                        <span class="card__datetime">
+                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
+                                        </span>
+                                        <span class="card__name">Гастроентерология</span>
+                                    </span> 
+                                </a>
+                                <!-- <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info">
+                                        <span class="card__datetime">
+                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
+                                        </span>
+                                        <span class="card__name">Пульмонология</span>
+                                    </span> 
+                                </a>
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info"> 
+                                        <span class="card__name">Проктология</span>
+                                    </span> 
+                                </a> -->
+                            </div>
+                            <!-- end Слайдер, Мед карты для мобильной версии -->
+                            <div class="general_medical_cards__footer">
                                 <button class="button button-main">Новое обращение</button>
+                            </div>
+                            <div class="buttons_wrapper general_medical_cards__footer_mobile">
+                                <button class="button button-olive mb-10">Новое обращение</button>
+                                <button class="button button-main mb-10">Видеоконсультация</button>
+                                <button class="button button-white">Оставить отзыв</button>
+                            </div>
+                        </div>
+                        <div class="transition_to_sections flex">
+                            <a href="#" class="transition_to_sections__link">
+                                <span class="transition_to_sections__icon_wrapper">
+                                    <span class="transition_to_sections__icon icon-file-text-plus"></span>
+                                </span>
+                                <span class="transition_to_sections__description">
+                                    <span class="transition_to_sections__name">Медицинские документы</span>
+                                    <span class="transition_to_sections__text">Консультативные выводы врачей, результаты анализов и обследований</span>
+                                </span>
+                            </a>
+                            <a href="#" class="transition_to_sections__link">
+                                <span class="transition_to_sections__icon_wrapper">
+                                    <span class="transition_to_sections__icon icon-camera"></span>
+                                </span>
+                                <span class="transition_to_sections__description">
+                                    <span class="transition_to_sections__name">Видео-кабинет</span>
+                                    <span class="transition_to_sections__text">Видео-консультации со специалистом, записи предыдущих консультаций</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="info_block mb-50">
+                            <div class="info_block__info">
+                                <h4 class="info_block__title">Выберите семейного врача!</h4>
+                                <p class="info_block__description">
+                                    Заключите декларацию с семейным врачом и пользуйтесь программой Государственных гарантий в ОН Клиник
+                                </p>
+                                <div class="info_block__button">
+                                    <button class="button button-olive">Записаться на прием</button>
+                                </div>
+                            </div>
+                            <div class="info_block__img">
+                                <img src="../svg/content/family-doctor.svg" alt="family doctor picture">
+                            </div>
+                        </div> 
+                    </div> 
+                    <div class="add_to_screen_block mb-40">
+                        <div class="add_to_screen__wrapper">
+                            <img class="close_button" src="../svg/icons/close.svg" alt="close button">
+                            <div class="add_to_screen__wrapper_content">
+                                <img class="add_to_screen__icon" src="../svg/icons/on-clinic.svg" alt="On Clinic icon">
+                                <p class="add_to_screen__text">Добавьте личный кабинет на главный экран и храните все записи всегда под рукой!</p>
+                            </div> 
+                            <div class="buttons_wrapper">
+                                <button class="button button-olive">Добавить</button>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="my_cabinet__wrapper"> 
+                        <div class="events mobile__events mb-40">
+                            <h4 class="events__title">Ближайшие записи</h4>
+                            <div class="events_on_date">
+                                <span class="events_on_date__date">18 января</span>
+                                <div class="events__item event">
+                                    <div class="event__inner">
+                                        <div class="event__text">Общий анализ крови</div>
+                                        <div class="event__time">09:00</div>
+                                    </div>
+                                    <div class="event__alert">
+                                        <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
+                                    </div>
+                                </div>
+                                <div class="events__item event">
+                                    <div class="event__inner">
+                                        <div class="event__text">Компьютерная томография</div>
+                                        <div class="event__time">10:00</div>
+                                    </div> 
+                                </div>
+                                <div class="events__item event">
+                                    <div class="event__inner">
+                                        <div class="event__text">Видео-консультация гастроентеролога</div>
+                                        <div class="event__time">
+                                            <span class="event__time_icon icon-camera"></span>
+                                            10:00
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="events_on_date">
+                                <span class="events_on_date__date">25 января</span>
+                                <div class="events__item event">
+                                    <div class="event__inner">
+                                        <div class="event__text">Колоноскопия</div>
+                                        <div class="event__time">09:00</div>
+                                    </div>
+                                    <div class="event__alert">
+                                        <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
+                                    </div>
+                                </div>
+                                <div class="events__item event">
+                                    <div class="event__inner">
+                                        <div class="event__text">Консультация гастроентеролога</div>
+                                        <div class="event__time">10:00</div>
+                                    </div> 
+                                </div> 
                             </div>
                         </div>
                     </div> 
-                </section>
+                </section> 
                 <!-- end Контент для Мой кабинет -->
             </main> 
             <footer class="footer">
@@ -320,13 +508,13 @@
                                 Главная
                             </a>
                         </li>
-                        <li class="menu__item menu__item--disable">
+                        <li class="menu__item">
                             <a href="#" class="menu__link">
                                 <span class="footer_mobile__icon icon-calendar"></span>
                                 Каллендарь
                             </a>
                         </li>
-                        <li class="menu__item menu__item--disable">
+                        <li class="menu__item">
                             <a href="#" class="menu__link">
                                 <span class="footer_mobile__icon icon-perscription"></span>
                                 Назначения

@@ -1385,6 +1385,88 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   padding-bottom: 64px;
   padding-top: 50px;
 }
+.calendar__wrapper .calendar__container .calendar {
+  padding: 20px 15px;
+  width: 100%;
+  border-bottom: 1px solid #E9E9E9;
+}
+.calendar__wrapper .events {
+  padding: 25px 20px 20px 20px;
+}
+
+.events .events_on_date + .events_on_date {
+  margin-top: 15px;
+}
+.events .events_on_date .events_on_date__date {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.events .events_on_date .events__item {
+  background-color: #F9F9FF;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.events .events_on_date .events__item .event__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 10px;
+}
+.events .events_on_date .events__item .event__inner .event__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  padding-right: 25px;
+}
+.events .events_on_date .events__item .event__inner .event__time {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+}
+.events .events_on_date .events__item .event__inner .event__time .event__time_icon {
+  position: absolute;
+  top: 0;
+  left: -21px;
+  font-size: 17px;
+  color: #1B6EBE;
+}
+.events .events_on_date .events__item .event__alert {
+  position: relative;
+  padding: 7px 15px 7px 35px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  background-color: #1B6EBE;
+  border-radius: 100px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.events .events_on_date .events__item .event__alert .event__alert_icon {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 18px;
+}
+.events .events_on_date .events__item + .events__item {
+  margin-bottom: 10px;
+}
 
 .cabinet_wrapper {
   display: -webkit-box;
@@ -1538,6 +1620,8 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
 }
 .cabinet_not_active__wrapper .cabinet_not_active .cabinet_not_active__content .buttons_wrapper {
   display: none;
+  max-width: 320px;
+  margin: 0 auto;
 }
 .cabinet_not_active__wrapper .cabinet_not_active .cabinet_not_active__content .cabinet_not_active__paragraph {
   font-weight: 400;
@@ -1547,6 +1631,10 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
 .cabinet_not_active__wrapper .cabinet_not_active .cabinet_not_active__img {
   max-width: 370px;
   width: 100%;
+}
+.cabinet_not_active__wrapper .cabinet_not_active .confirmation {
+  max-width: 340px;
+  margin: 0 auto;
 }
 .cabinet_not_active__wrapper .cabinet_not_active .confirmation .confirmation__link {
   display: block;
@@ -1590,13 +1678,11 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
           transform: translate(-50%, -50%);
 }
 
-.cabinet_not_active__wrapper .add_to_screen_block {
-  display: none;
-}
-
 .add_to_screen_block {
-  max-width: 360px;
-  margin: 0 auto;
+  display: none;
+  max-width: 702px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #FFFFFF;
 }
 .add_to_screen_block .add_to_screen__wrapper {
@@ -1632,6 +1718,11 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   padding-left: 20px;
   padding-right: 30px;
 }
+.add_to_screen_block .add_to_screen__wrapper .buttons_wrapper {
+  margin: 10px auto 0 auto;
+  max-width: 320px;
+  width: 100%;
+}
 
 .cabinet__title {
   font-weight: 500;
@@ -1651,8 +1742,14 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
 .my_cabinet .my_cabinet__wrapper {
   max-width: 702px;
   width: 100%;
-  padding: 30px 15px;
-  margin: 0 auto;
+  padding: 0 15px;
+  margin: 30px auto 40px auto;
+}
+.my_cabinet .my_cabinet__wrapper .events__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 20px;
 }
 
 .patient_info {
@@ -1692,6 +1789,9 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
      object-position: center;
 }
 
+.reminders {
+  margin-bottom: 50px;
+}
 .reminders .reminder_item {
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
@@ -1743,7 +1843,74 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   color: #B7B7B7;
 }
 
-.block_medical_cards .block_medical_cards__header.medical_cards {
+.medical_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.medical_cards .medical_cards__item, .medical_cards__modile .medical_cards__item {
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.medical_cards .medical_cards__item .card__info, .medical_cards__modile .medical_cards__item .card__info {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+.medical_cards .medical_cards__item .card__info .card__datetime, .medical_cards__modile .medical_cards__item .card__info .card__datetime {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 5px 20px 5px 30px;
+  background-color: #F6F5FA;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+.medical_cards .medical_cards__item .card__info .card__datetime .card__datetime_icon, .medical_cards__modile .medical_cards__item .card__info .card__datetime .card__datetime_icon {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-right: 7px;
+  font-size: 18px;
+  color: #1B6EBE;
+}
+.medical_cards .medical_cards__item .card__info .card__name, .medical_cards__modile .medical_cards__item .card__info .card__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  max-width: 180px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.medical_cards .medical_cards__item:hover, .medical_cards__modile .medical_cards__item:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.general_medical_cards {
+  margin-bottom: 50px;
+}
+.general_medical_cards .general_medical_cards__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1754,27 +1921,172 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.block_medical_cards .block_medical_cards__header.medical_cards .medical_cards__title {
+.general_medical_cards .general_medical_cards__header .general_medical_cards__title {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
 }
-.block_medical_cards .block_medical_cards__header.medical_cards .medical_cards__button {
+.general_medical_cards .general_medical_cards__header .general_medical_cards__button {
   max-width: 90px;
   width: 100%;
 }
-.block_medical_cards .block_medical_cards__header.medical_cards .medical_cards__button button {
+.general_medical_cards .general_medical_cards__header .general_medical_cards__button button {
   width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
 }
-.block_medical_cards .block_medical_cards__footer {
+.general_medical_cards .medical_cards {
+  margin-bottom: 20px;
+}
+.general_medical_cards .medical_cards .medical_cards__item {
+  max-width: 220px;
+  padding-right: 20px;
+}
+.general_medical_cards .medical_cards__modile {
+  display: none;
+}
+.general_medical_cards .general_medical_cards__footer {
   max-width: 210px;
   width: 1005;
 }
-.block_medical_cards .block_medical_cards__footer button {
+.general_medical_cards .general_medical_cards__footer button {
   width: 100%;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+.general_medical_cards .general_medical_cards__footer_mobile {
+  display: none;
+  max-width: 320px;
+  width: 100%;
+}
+.general_medical_cards .general_medical_cards__footer_mobile button {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.transition_to_sections {
+  margin-bottom: 50px;
+}
+.transition_to_sections .transition_to_sections__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.transition_to_sections .transition_to_sections__link:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.transition_to_sections .transition_to_sections__link:nth-child(odd) .transition_to_sections__icon_wrapper {
+  background-color: #B7B308;
+}
+.transition_to_sections .transition_to_sections__link:nth-of-type(even) .transition_to_sections__icon_wrapper {
+  background-color: #1B6EBE;
+}
+.transition_to_sections .transition_to_sections__link + .transition_to_sections__link {
+  margin-left: 35px;
+}
+.transition_to_sections .transition_to_sections__description {
+  margin-left: 15px;
+}
+.transition_to_sections .transition_to_sections__description .transition_to_sections__name {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+.transition_to_sections .transition_to_sections__description .transition_to_sections__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+.transition_to_sections .transition_to_sections__icon_wrapper {
+  position: relative;
+  display: block;
+  max-width: 40px;
+  width: 100%;
+  max-height: 40px;
+  height: 100%;
+  border-radius: 50%;
+}
+.transition_to_sections .transition_to_sections__icon_wrapper .transition_to_sections__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #FFFFFF;
+  font-size: 25px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.info_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 25px 20px 25px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+}
+.info_block .info_block__info .info_block__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+.info_block .info_block__info .info_block__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+.info_block .info_block__info .info_block__button {
+  max-width: 190px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+.info_block .info_block__info .info_block__button button {
+  width: 100%;
+}
+.info_block .info_block__img {
+  max-width: 190px;
+  width: 100%;
+  padding-left: 15px;
+}
+
+.mobile__events {
+  display: none;
 }
 
 @media screen and (max-width: 992px) {
@@ -1833,6 +2145,10 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   .cabinet_wrapper .cabinet_content .my_cabinet {
     margin-right: 0;
   }
+  .cabinet_wrapper .cabinet_content .my_cabinet .my_cabinet__wrapper {
+    padding: 0 20px;
+    margin: 25px auto 25px auto;
+  }
   .cabinet_wrapper .content__my_cabinet {
     margin-left: 0;
   }
@@ -1872,7 +2188,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
     padding: 25px 35px;
   }
   .cabinet_not_active__wrapper .cabinet_not_active .cabinet_not_active__content {
-    max-width: 320px;
+    max-width: 702px;
   }
   .cabinet_not_active__wrapper .cabinet_not_active .cabinet_not_active__content .buttons_wrapper {
     display: block;
@@ -1880,10 +2196,55 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   .cabinet_not_active__wrapper .cabinet_not_active .cabinet_not_active__img {
     display: none;
   }
-  .cabinet_not_active__wrapper .add_to_screen_block {
+  .add_to_screen_block {
     display: block;
   }
   .calendar__wrapper {
     display: none;
+  }
+  .reminders {
+    margin-bottom: 40px;
+  }
+  .block_medical_cards {
+    margin-bottom: 40px;
+  }
+  .block_medical_cards .block_medical_cards__footer {
+    display: none;
+  }
+  .block_medical_cards .block_medical_cards__footer_mobile {
+    display: block;
+  }
+  .block_medical_cards .block_medical_cards__cards {
+    margin-bottom: 30px;
+  }
+  .transition_to_sections {
+    margin-bottom: 40px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .transition_to_sections .transition_to_sections__link + .transition_to_sections__link {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .info_block {
+    display: none;
+  }
+  .general_medical_cards .medical_cards__modile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .general_medical_cards .medical_cards__modile .medical_cards__item {
+    min-width: 212px;
+    padding-right: 15px;
+  }
+  .general_medical_cards .medical_cards {
+    display: none;
+  }
+  .mobile__events {
+    display: block;
   }
 }/*# sourceMappingURL=app.css.map */

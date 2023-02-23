@@ -1,4 +1,3 @@
-
 .calendar__wrapper { 
     position: fixed; 
     height: 100%;
@@ -6,8 +5,85 @@
     background-color: $white;
     top: 0;
     right: 0;
-    z-index: 0;
+    z-index: 0; 
     overflow: auto;
     padding-bottom: 64px;
     padding-top: 50px;
+
+    .calendar__container { 
+        .calendar {
+            padding: 20px 15px;
+            width: 100%;
+            border-bottom: 1px solid #E9E9E9; 
+        } 
+    }
+    .events {
+        padding: 25px 20px 20px 20px; 
+    }
+}
+
+.events {
+    .events_on_date + .events_on_date {
+        margin-top: 15px;
+    }
+
+    .events_on_date {
+        .events_on_date__date {
+            display: block;
+            @include font(400, 16px, 18px);
+            margin-bottom: 10px;
+        }
+
+        .events__item {
+            background-color: $bg;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+            border-radius: 5px;
+            padding: 10px 15px;
+
+            .event__inner {
+                @include flex-space-between-align-start;
+                margin-bottom: 10px;
+
+                .event__text {
+                    @include font(500, 14px, 16px);
+                    padding-right: 25px
+                }
+
+                .event__time {
+                    @include font(400, 14px, 16px);
+                    position: relative;
+
+                    .event__time_icon {
+                        position: absolute;
+                        top: 0;
+                        left: -21px;
+                        font-size: 17px;
+                        color: $main; 
+                    }
+                }
+            }
+
+            .event__alert {
+                position: relative;
+                padding: 7px 15px 7px 35px;
+                @include font(500, 12px, 14px);
+                color: $white;
+                background-color: $main;
+                border-radius: 100px;
+                width: fit-content;
+
+                .event__alert_icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 13px;
+                    transform: translateY(-50%);
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .events__item + .events__item {
+            margin-bottom: 10px;
+        }
+    }
 }
