@@ -769,6 +769,45 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   width: 100%;
 }
 
+.my_cabinet__nav .bread_crumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.my_cabinet__nav .bread_crumbs .bread_crumbs__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.my_cabinet__nav .bread_crumbs .bread_crumbs__item .bread_crumbs__link {
+  color: #1B6EBE;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.my_cabinet__nav .bread_crumbs .bread_crumbs__item .bread_crumbs__link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.my_cabinet__nav .bread_crumbs .bread_crumbs__item + .bread_crumbs__item {
+  padding-left: 25px;
+  margin-left: 10px;
+  position: relative;
+}
+.my_cabinet__nav .bread_crumbs .bread_crumbs__item + .bread_crumbs__item::before {
+  position: absolute;
+  content: url("../svg/icons/arrow-left.svg");
+  top: 0;
+  left: 4px;
+}
+
+.section__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .header {
   top: 0;
   left: 0;
@@ -1902,7 +1941,9 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   border-radius: 100px;
   margin-bottom: 8px;
 }
-.medical_cards .medical_cards__item .card__info .card__datetime .card__datetime_icon, .medical_cards__modile .medical_cards__item .card__info .card__datetime .card__datetime_icon {
+.medical_cards .medical_cards__item .card__info .card__datetime .card__datetime_icon,
+.medical_cards .medical_cards__item .card__info .card__datetime .card__archive_icon, .medical_cards__modile .medical_cards__item .card__info .card__datetime .card__datetime_icon,
+.medical_cards__modile .medical_cards__item .card__info .card__datetime .card__archive_icon {
   position: absolute;
   top: 50%;
   left: 6px;
@@ -1911,7 +1952,12 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
           transform: translateY(-50%);
   padding-right: 7px;
   font-size: 18px;
+}
+.medical_cards .medical_cards__item .card__info .card__datetime .card__datetime_icon, .medical_cards__modile .medical_cards__item .card__info .card__datetime .card__datetime_icon {
   color: #1B6EBE;
+}
+.medical_cards .medical_cards__item .card__info .card__datetime .card__archive_icon, .medical_cards__modile .medical_cards__item .card__info .card__datetime .card__archive_icon {
+  color: #9C9C9C;
 }
 .medical_cards .medical_cards__item .card__info .card__name, .medical_cards__modile .medical_cards__item .card__info .card__name {
   font-weight: 500;
@@ -2112,15 +2158,112 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   display: none;
 }
 
+.my_cabinet__nav_mobile {
+  display: none;
+}
+
+.medical_cards__section .medical_cards_section__title_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.medical_cards__section .medical_cards_section__title_wrapper .year {
+  display: none;
+}
+.medical_cards__section .medical_cards_section__list_years {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.medical_cards__section .medical_cards_section__list_years .list_years__item {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.medical_cards__section .medical_cards_section__list_years .list_years__item .list_years__item_text {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #1B6EBE;
+  border-radius: 5px;
+}
+.medical_cards__section .medical_cards_section__list_years .list_years__item input[type=radio] {
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  z-index: -1;
+}
+.medical_cards__section .medical_cards_section__list_years .list_years__item input[type=radio]:checked + .list_years__item_text {
+  color: #FFFFFF;
+  background-color: #1B6EBE;
+}
+.medical_cards__section .medical_cards .medical_cards__item {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  margin-right: 50px;
+  margin-bottom: 25px;
+}
+.medical_cards__section .medical_cards .medical_cards__item:nth-of-type(2n) {
+  margin-right: 0;
+}
+.medical_cards__section .medical_cards .medical_cards__item .card__info {
+  left: 20px;
+  bottom: 20px;
+}
+.medical_cards__section .medical_cards .medical_cards__item .card__info .card__name {
+  max-width: 250px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.medical_cards__section .medical_cards_on_range__title {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1100px) {
+  .medical_cards__section .medical_cards .medical_cards__item {
+    -ms-flex-preferred-size: 43%;
+        flex-basis: 43%;
+  }
+  .medical_cards__section .medical_cards .medical_cards__item .card__info .card__name {
+    max-width: 150px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 @media screen and (max-width: 992px) {
   .header__burger,
   .footer_mobile,
-  .header .header__container {
+  .header .header__container,
+  .add_to_screen_block,
+  .mobile__events,
+  .my_cabinet__nav_mobile {
     display: block;
   }
   .header__call_and_lang,
   .footer,
-  .sidebar {
+  .sidebar,
+  .calendar__wrapper,
+  .info_block,
+  .my_cabinet__nav,
+  .medical_cards_section__list_years {
     display: none;
   }
   .header {
@@ -2220,12 +2363,6 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   .cabinet_not_active__wrapper .cabinet_not_active .cabinet_not_active__img {
     display: none;
   }
-  .add_to_screen_block {
-    display: block;
-  }
-  .calendar__wrapper {
-    display: none;
-  }
   .reminders {
     margin-bottom: 40px;
   }
@@ -2250,9 +2387,6 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
     margin-left: 0;
     margin-top: 10px;
   }
-  .info_block {
-    display: none;
-  }
   .general_medical_cards .medical_cards__modile {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2268,7 +2402,37 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   .general_medical_cards .medical_cards {
     display: none;
   }
-  .mobile__events {
+  .section__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .medical_cards__section .medical_cards_section__title_wrapper .year {
     display: block;
+  }
+  .medical_cards__section .medical_cards_section__list_years {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .medical_cards__section .medical_cards .medical_cards__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .medical_cards__section .medical_cards .medical_cards__item:hover {
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .medical_cards__section .medical_cards .medical_cards__item .card__info {
+    left: 40px;
+    bottom: 40px;
+  }
+  .medical_cards__section .medical_cards .medical_cards__item .card__info .card__name {
+    max-width: none;
+    font-size: 20px;
+    line-height: 24px;
   }
 }/*# sourceMappingURL=app.css.map */

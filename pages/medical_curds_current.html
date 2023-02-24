@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/app.min.css">
+</head>
+<body> 
+    <header class="header">
+        <div class="header__container">
+            <nav class="header__nav">
+                <div class="nav__wrapper">
+                    <div class="header__burger burger" id="burger">
+                        <span class="burger__lines"></span>
+                    </div>
+                    <a href="#" class="header__logo">
+                        <img src="../svg/logo.svg" alt="logotype">
+                    </a>
+                </div> 
+                <ul class="header__menu menu">
+                    <li class="menu__item menu__item--active">
+                        <a href="#" class="menu__link">Мой кабинет</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Мои дети</a> 
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__call_and_lang">
+                <div class="header__call">
+                    <a href="tel:08000000000" class="call_link">0 (800) <span>Показать номер</span></a>
+                    <button class="button button-olive">Обратный звонок</button>
+                </div>
+                <ul class="header__langs langs">
+                    <li class="langs__item">ua</li>
+                    <li class="langs__item langs__item--active">ru</li>
+                    <li class="langs__item">en</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="sidebar__mobile" id="sidebar__mobile">
+        <div class="sidebar__wrapper">
+            <nav class="sidebar__nav pb-30">
+                <ul class="sidebar__menu sidebar_menu">
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-folder-open"></span>
+                            </span> 
+                            Медицинская карта
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-file-text-plus"></span>
+                            </span> 
+                            Мои назначения
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper mark">
+                                <span class="menu_icon icon-notification"></span>
+                            </span> 
+                            Уведомления
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-money"></span>
+                            </span> 
+                            Задолженность
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-user-fill"></span>
+                            </span> 
+                            Профиль
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link">
+                            <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-cite"></span>
+                            </span> 
+                            Мои отзывы
+                        </a>
+                    </li>
+                    <li class="sidebar_menu__item">
+                        <a href="#" class="sidebar_menu__link sidebar_menu__link--arrow" id="burger_menu_info">
+                            <span class="menu_icon__wrapper">
+                                <span class="menu_icon icon-info"></span>
+                            </span> 
+                            Дополнительно 
+                        </a>
+                        <ul class="sidebar_menu sidebar_mobile_submenu">
+                            <li class="sidebar_menu__item">
+                                <a href="#" class="sidebar_menu__link sidebar_menu__link--arrow_back" id="close_burger_menu_info">
+                                    <span class="menu_icon__wrapper">
+                                        <span class="menu_icon icon-info"></span>
+                                    </span> 
+                                    Дополнительно 
+                                </a>
+                            </li>
+                            <li class="sidebar_menu__item">
+                                <a href="#" class="sidebar_menu__link">
+                                    <span class="menu_icon__wrapper">
+                                        <span class="menu_icon icon-newspaper"></span>
+                                    </span> 
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="sidebar_menu__item">
+                                <a href="#" class="sidebar_menu__link">
+                                    <span class="menu_icon__wrapper">
+                                        <span class="menu_icon icon-call"></span>
+                                    </span> 
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="sidebar_menu__item">
+                                <a href="#" class="sidebar_menu__link">
+                                    <span class="menu_icon__wrapper">
+                                        <span class="menu_icon icon-on-clinic"></span>
+                                    </span> 
+                                    Сайт ОН Клиник
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="buttons_wrapper pb-30">
+                <button class="button button-main mb-15">Запись на прием</button>
+                <button class="button button-olive mb-15">Видео-консультация</button>
+                <button class="button button-olive-white mb-30">Оставить отзыв</button> 
+                <div class="sidebar_mobile__call_and_lang pt-30">
+                    <div class="sidebar_mobile__call">
+                        <a href="tel:08000000000" class="call_link pb-25">0 (800) <span>Показать номер</span></a>
+                        <button class="button button-olive">Обратный звонок</button>
+                    </div>
+                    <ul class="sidebar_mobile__langs langs">
+                        <li class="langs__item">ua</li>
+                        <li class="langs__item langs__item--active">ru</li>
+                        <li class="langs__item">en</li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <section class="cabinet_wrapper"> 
+        <aside class="sidebar_my_cabinet sidebar">
+            <div class="sidebar__wrapper">
+                <nav class="sidebar__nav pb-30">
+                    <ul class="sidebar_menu">
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-folder-open"></span>
+                                </span> 
+                                Медицинская карта 
+                            </a>
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-file-text-plus"></span>
+                                </span> 
+                                Мои назначения
+                            </a>
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper mark">
+                                    <span class="menu_icon icon-notification"></span>
+                                </span> 
+                                Уведомления
+                            </a>
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-money"></span>
+                                </span> 
+                                Задолженность 
+                            </a>
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-user-fill"></span>
+                                </span> 
+                                Профиль
+                            </a>
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-cite"></span>
+                                </span> 
+                                Мои отзывы
+                            </a> 
+                        </li>
+                        <li class="sidebar_menu__item">
+                            <a href="#" class="sidebar_menu__link sidebar_menu__link--arrow" id="menu_info">
+                                <span class="menu_icon__wrapper">
+                                    <span class="menu_icon icon-info"></span>
+                                </span> 
+                                Дополнительно
+                            </a>
+                            <ul class="sidebar_menu sidebar_submenu">
+                                <li class="sidebar_menu__item">
+                                    <a href="#" class="sidebar_menu__link">
+                                        <span class="menu_icon__wrapper">
+                                            <span class="menu_icon icon-newspaper"></span>
+                                        </span> 
+                                        Новости
+                                    </a>
+                                </li>
+                                <li class="sidebar_menu__item">
+                                    <a href="#" class="sidebar_menu__link">
+                                        <span class="menu_icon__wrapper">
+                                            <span class="menu_icon icon-call"></span>
+                                        </span> 
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="sidebar_menu__item">
+                                    <a href="#" class="sidebar_menu__link">
+                                        <span class="menu_icon__wrapper">
+                                            <span class="menu_icon icon-on-clinic"></span>
+                                        </span> 
+                                        Сайт ОН Клиник
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="buttons_wrapper  pb-45">
+                    <button class="button button-main mb-15">Запись на прием</button>
+                    <button class="button button-olive mb-15">Видео-консультация</button>
+                    <button class="button button-olive-white">Оставить отзыв</button>
+                </div> 
+            </div>
+        </aside>
+        <!-- Панель с календарем и ивентами -->
+        <aside class="calendar__wrapper"> 
+            <div class="calendar__container">
+                <div class="calendar">
+                    <!-- муляж, здесь будет компонент -->
+                    <img src="../img/calendar.jpg" alt="calendar">
+                </div>
+                <div class="events">
+                    <div class="events_on_date">
+                        <span class="events_on_date__date">18 января</span>
+                        <a href="#" class="events__item event">
+                            <div class="event__inner">
+                                <div class="event__text">Общий анализ крови</div>
+                                <div class="event__time">09:00</div>
+                            </div>
+                            <div class="event__alert">
+                                <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
+                            </div>
+                        </a>
+                        <a href="#" class="events__item event">
+                            <div class="event__inner">
+                                <div class="event__text">Компьютерная томография</div>
+                                <div class="event__time">10:00</div>
+                            </div> 
+                        </a>
+                        <a href="#" class="events__item event">
+                            <div class="event__inner">
+                                <div class="event__text">Видео-консультация гастроентеролога</div>
+                                <div class="event__time">
+                                    <span class="event__time_icon icon-camera"></span>
+                                    10:00
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </aside>
+        <!-- end Панель с календарем и ивентами -->
+        <section class="cabinet_content content__my_cabinet">
+            <main class="main">
+                <!-- Контент для Мой кабинет -->
+                <section class="my_cabinet"> 
+                    <div class="my_cabinet__wrapper"> 
+                        <section class="medical_cards__section">
+                            <nav class="my_cabinet__nav mb-30">
+                                <ul class="bread_crumbs">
+                                    <li class="bread_crumbs__item">
+                                        <a class="bread_crumbs__link" href="#">Главная</a>
+                                    </li>
+                                    <li class="bread_crumbs__item">Медицинская карта</li>
+                                </ul>
+                            </nav>
+                            <nav class="my_cabinet__nav_mobile mb-20"> 
+                                <a class="back_to" href="#">Главная</a> 
+                            </nav>
+                            <div class="medical_cards_section__title_wrapper mb-30">
+                                <h2 class="section__title">Медицинская карта</h2>
+                                <select name="" class="year">
+                                    <option value="" selected>2023</option>
+                                    <option value="">2022</option>
+                                    <option value="">2021</option>
+                                </select>
+                            </div> 
+                            <div class="medical_cards_section__list_years list_years mb-30">
+                                <label class="list_years__item">
+                                    <input type="radio" name="year" value="2023" checked>
+                                    <span class="list_years__item_text">2023</span>
+                                </label>
+                                <label class="list_years__item">
+                                    <input type="radio" name="year" value="2022">
+                                    <span class="list_years__item_text">2022</span>
+                                </label>
+                                <label class="list_years__item">
+                                    <input type="radio" name="year" value="2021">
+                                    <span class="list_years__item_text">2021</span>
+                                </label>
+                                <label class="list_years__item">
+                                    <input type="radio" name="year" value="2020">
+                                    <span class="list_years__item_text">2020</span>
+                                </label>
+                            </div>
+                            <div class="medical_cards">
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info">
+                                        <span class="card__datetime">
+                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
+                                        </span>
+                                        <span class="card__name">Гастроентерология</span>
+                                    </span> 
+                                </a>
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info">
+                                        <span class="card__datetime">
+                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
+                                        </span>
+                                        <span class="card__name">Пульмонология</span>
+                                    </span> 
+                                </a>
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info"> 
+                                        <span class="card__name">Хирургия</span>
+                                    </span> 
+                                </a>
+                                <a href="#" class="medical_cards__item card">
+                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
+                                    <span class="card__info"> 
+                                        <span class="card__name">Гинекология</span>
+                                    </span> 
+                                </a>
+                            </div>
+                        </section>
+                    </div> 
+                </section> 
+                <!-- end Контент для Мой кабинет -->
+            </main> 
+            <footer class="footer">
+                <div class="footer_content__wrapper">
+                    <p class="warning_text">
+                        Самолечение может быть опасным для вашего здоровья.
+                    </p>
+                    <a href="#" class="privacy_policy__link">
+                        Условия конфиденциальности
+                    </a>
+                </div> 
+            </footer> 
+            <footer class="footer_mobile">
+                <nav class="footer_mobile__nav">
+                    <ul class="footer_mobile__menu menu">
+                        <li class="menu__item menu__item--active">
+                            <a href="#" class="menu__link">
+                                <span class="footer_mobile__icon icon-home"></span>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                <span class="footer_mobile__icon icon-calendar"></span>
+                                Каллендарь
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                <span class="footer_mobile__icon icon-perscription"></span>
+                                Назначения
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                <span class="footer_mobile__icon icon-user"></span>
+                                Профиль
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+        </section> 
+    </section> 
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- menu-burger -->
+    <script src="../js/menu-burger.js"></script>
+    <!-- sidebar -->
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>

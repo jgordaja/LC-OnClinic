@@ -368,3 +368,37 @@ input.error {
         width: 100%;
     } 
 }
+
+.my_cabinet__nav .bread_crumbs {
+    display: flex;
+
+    .bread_crumbs__item {
+        @include font(400, 14px, 16px);
+
+        .bread_crumbs__link {
+            color: $main;
+            @include transition(0.4s);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        } 
+    }
+
+    .bread_crumbs__item + .bread_crumbs__item {
+        padding-left: 25px;
+        margin-left: 10px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: url('../svg/icons/arrow-left.svg');
+            top: 0;
+            left: 4px; 
+        }
+    }
+}
+
+.section__title {
+    @include font(500, 20px, 24px);
+}

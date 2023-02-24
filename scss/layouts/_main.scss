@@ -349,14 +349,22 @@
                 border-radius: 100px;
                 margin-bottom: 8px;
 
-                .card__datetime_icon {
+                .card__datetime_icon,
+                .card__archive_icon {
                     position: absolute;
                     top: 50%;
                     left: 6px;
                     transform: translateY(-50%);
                     padding-right: 7px;
-                    font-size: 18px;
+                    font-size: 18px; 
+                }
+
+                .card__datetime_icon{
                     color: $main;
+                }
+
+                .card__archive_icon{
+                    color: #9C9C9C;
                 }
             }
 
@@ -534,4 +542,77 @@
 
 .mobile__events {
     display: none;
+}
+
+.my_cabinet__nav_mobile {
+    display: none;
+}
+
+.medical_cards__section {
+    .medical_cards_section__title_wrapper {
+        @include flex-space-between-align-center; 
+
+        .year {
+            display: none;
+        }
+    }
+
+    .medical_cards_section__list_years {
+        @include flex-flex-start-align-center;
+
+        .list_years__item {
+            position: relative; 
+            @include font(500, 14px, 16px); 
+            margin-right: 10px; 
+            cursor: pointer;
+
+            .list_years__item_text {
+                display: block; 
+                padding: 6px 12px;
+                border: 1px solid $main;
+            border-radius: 5px;
+            }
+
+            input[type=radio] {
+                opacity: 0;
+                outline: none;
+                position: absolute;
+                z-index: -1;
+
+                &:checked + .list_years__item_text {
+                    color: $white;
+                    background-color: $main;
+                }
+            } 
+        }
+    }
+
+    .medical_cards {
+        .medical_cards__item {
+            flex-basis: 45%;
+            margin-right: 50px;
+            margin-bottom: 25px;
+
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+
+            .card__info { 
+                left: 20px;
+                bottom: 20px; 
+
+                .card__name {
+                    max-width: 250px;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    .medical_cards_on_range__title {
+        display: block;
+        @include font(500, 14px, 16px);
+        margin-bottom: 15px;
+    }
 }

@@ -1,13 +1,36 @@
+@media screen and (max-width: 1100px) {
+    .medical_cards__section {
+        .medical_cards {
+            .medical_cards__item {
+                flex-basis: 43%;
+
+                .card__info .card__name {
+                    max-width: 150px;
+                    font-size: 16px;
+                    line-height: 18px; 
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {  
     .header__burger, 
     .footer_mobile,
-    .header .header__container {
+    .header .header__container,
+    .add_to_screen_block,
+    .mobile__events,
+    .my_cabinet__nav_mobile {
         display: block;
     }
     
     .header__call_and_lang,
-    .footer,
-    .sidebar {
+    .footer, 
+    .sidebar,
+    .calendar__wrapper, 
+    .info_block,
+    .my_cabinet__nav,
+    .medical_cards_section__list_years {
         display: none; 
     }
 
@@ -118,14 +141,6 @@
         }
     }
 
-    .add_to_screen_block {
-        display: block;
-    }
-
-    .calendar__wrapper {
-        display: none;
-    }
-
     .reminders {
         margin-bottom: 40px;
     }
@@ -156,10 +171,6 @@
         }
     }
 
-    .info_block {
-        display: none;
-    }
-
     .general_medical_cards {
         .medical_cards__modile { 
             display: flex;
@@ -177,7 +188,46 @@
         }
     }
 
-    .mobile__events {
-        display: block;
+    .section__title {
+        @include font(500, 18px, 21px);
+    }
+
+    .medical_cards__section {
+        .medical_cards_section__title_wrapper { 
+            .year {
+                display: block;
+            }
+        }
+
+        .medical_cards_section__list_years {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .medical_cards__section {
+        .medical_cards {
+            .medical_cards__item {
+                flex-basis: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
+
+                &:hover {
+                    transform: scale(0.9);
+                }
+
+                .card__info {
+                    left: 40px;
+                    bottom: 40px; 
+
+                    .card__name {
+                        max-width: none;
+                        font-size: 20px;
+                        line-height: 24px;
+                    } 
+                }
+            }
+        }
     }
 }
