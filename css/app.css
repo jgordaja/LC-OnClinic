@@ -257,7 +257,7 @@ input {
   border-radius: 3px;
   outline: none;
 }
-input:not(input[type=checkbox], input[type=radio]) {
+input[type=text], input[type=password], input[type=email], input[type=date], input[type=tel] {
   width: 100%;
 }
 

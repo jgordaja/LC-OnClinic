@@ -41,7 +41,11 @@ input {
     border-radius: 3px;
     outline: none; 
 
-    &:not(&[type='checkbox'], &[type='radio']){
+    &[type='text'],
+    &[type='password'],
+    &[type='email'],
+    &[type='date'],
+    &[type='tel'] {
         width: 100%;
     }
 }
@@ -260,10 +264,6 @@ button[disabled] {
     color: #333333;
     @include font($font-weight-medium, $large-font-size, 28px); 
 }
-
-// .form_group_wrapper:not(.form_group_wrapper:last-of-type) {
-//     padding-bottom: 25px;
-// }
 
 .form_group_wrapper {
     padding-bottom: 25px;
