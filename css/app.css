@@ -654,8 +654,12 @@ button[disabled] {
   line-height: 28px;
 }
 
-.form_group_wrapper:not(.form_group_wrapper:last-of-type) {
+.form_group_wrapper {
   padding-bottom: 25px;
+}
+
+.form_group_wrapper:last-of-type {
+  padding-bottom: 0;
 }
 
 .form_group_flex {
