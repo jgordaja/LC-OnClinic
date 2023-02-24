@@ -31,22 +31,23 @@
             padding-left: 30px;
     
             .menu__item {
-                font-size: $tiny-font-size;
-
-                &:not(&:last-child) { 
-                    .menu__link { 
-                        padding-right: 21px; 
-        
-                        &::after { 
-                            top: 50%; 
-                            right: 10px;
-                            width: 1px;
-                            height: 20px; 
-                            transform: translateY(-50%);
-                        }
-                    }
-                }
+                font-size: $tiny-font-size; 
             } 
+
+            .menu__item + .menu__item {
+                .menu__link { 
+                    padding-left: 21px;
+                    position: relative; 
+    
+                    &::before { 
+                        top: 50%;
+                        left: 10px;
+                        width: 1px;
+                        height: 20px; 
+                        transform: translateY(-50%);
+                    }
+                } 
+            }
         }
     }
 

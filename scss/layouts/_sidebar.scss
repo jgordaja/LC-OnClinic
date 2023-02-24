@@ -217,8 +217,12 @@
     .langs {
         @include flex-center-align-center;
 
-        .langs__item:not(.langs__item:first-child) {
+        .langs__item {
             padding-left: 35px;
+        }
+
+        .langs__item:first-child {
+            padding-left: 0;
         }
     }
 

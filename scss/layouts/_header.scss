@@ -32,6 +32,24 @@
         justify-content: start;
         padding-left: 30px;
 
+        .menu__item + .menu__item {
+            .menu__link { 
+                padding-left: 13px;
+                position: relative; 
+
+                &::before { 
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 8px;
+                    width: 1px;
+                    height: 10px;
+                    background-color: $white;
+                    transform: translateY(-50%);
+                }
+            } 
+        }
+
         .menu__item { 
             .menu__link {
                 @include transition(0.4s);
@@ -41,28 +59,10 @@
                 }
             }
 
-            &:not(&:last-child) { 
-                .menu__link { 
-                    padding-right: 14px;
-                    position: relative; 
-
-                    &::after { 
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        right: 9px;
-                        width: 1px;
-                        height: 10px;
-                        background-color: $white;
-                        transform: translateY(-50%);
-                    }
-                } 
-            }
-
             &--active {
                 font-weight: $font-weight-semibold;
             }
-        } 
+        }
     }
 }
 
@@ -144,14 +144,15 @@
     .langs__item {
         text-transform: uppercase; 
         @include transition(0.4s);
+        padding-left: 16px;
         cursor: pointer;
 
         &:hover { 
             transform: scale(1.2);
         }
 
-        &:not(&:first-child) {
-            padding-left: 16px;
+        &:first-child {
+            padding-left: 0;
         }
     }
 
