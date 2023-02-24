@@ -1413,11 +1413,20 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   margin-bottom: 10px;
 }
 .events .events_on_date .events__item {
+  display: block;
   background-color: #F9F9FF;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
   padding: 10px 15px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.events .events_on_date .events__item:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .events .events_on_date .events__item .event__inner {
   display: -webkit-box;
@@ -1473,7 +1482,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   font-size: 18px;
 }
 .events .events_on_date .events__item + .events__item {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .cabinet_wrapper {
@@ -1697,17 +1706,6 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   padding: 25px 20px;
   position: relative;
 }
-.add_to_screen_block .add_to_screen__wrapper .close_button {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 25px;
-  right: 20px;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  cursor: pointer;
-}
 .add_to_screen_block .add_to_screen__wrapper .add_to_screen__wrapper_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1730,6 +1728,18 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   margin: 10px auto 0 auto;
   max-width: 320px;
   width: 100%;
+}
+
+.close_button {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 25px;
+  right: 20px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .cabinet__title {
@@ -1805,7 +1815,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
-  padding: 10px 25px 10px 20px;
+  padding: 10px 40px 10px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1815,6 +1825,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
 }
 .reminders .reminder_item .reminder_item__block {
   position: relative;
@@ -1849,6 +1860,10 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   font-size: 14px;
   line-height: 16px;
   color: #B7B7B7;
+}
+.reminders .reminder_item .close_button {
+  top: 15px;
+  right: 5px;
 }
 
 .medical_cards {
