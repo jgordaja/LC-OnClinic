@@ -191,16 +191,6 @@
         padding: 25px 20px;
         position: relative;
 
-        .close_button {
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            top: 25px;
-            right: 20px;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-        }
-
         .add_to_screen__wrapper_content {
             display: flex;
             align-items: center;
@@ -222,6 +212,16 @@
             width: 100%;
         }
     }
+}
+
+.close_button {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 25px;
+    right: 20px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .cabinet__title {
@@ -283,8 +283,9 @@
         background-color: $white;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
         border-radius: 10px;
-        padding: 10px 25px 10px 20px;
+        padding: 10px 40px 10px 20px;
         @include flex-space-between-align-start; 
+        position: relative;
 
         .reminder_item__block {
             position: relative;
@@ -315,6 +316,11 @@
         .reminder_item__time {
                 @include font(400, 14px, 16px);
                 color: #B7B7B7;
+        }
+
+        .close_button { 
+            top: 15px;
+            right: 5px; 
         }
     }
 }
