@@ -736,27 +736,18 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   border-radius: 133.884px;
 }
 .toggle .toggle__item {
+  display: block;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   text-align: center;
   padding: 0;
   position: relative;
-  cursor: pointer;
-}
-.toggle .toggle__item span {
-  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 38px;
   color: #000000;
 }
-.toggle .toggle__item input[type=radio] {
-  opacity: 0;
-  outline: none;
-  position: absolute;
-  z-index: -1;
-}
-.toggle .toggle__item input[type=radio]:checked + span {
+.toggle .toggle__item--active {
   background-color: #1B6EBE;
   border-radius: 133.884px;
   color: #FFFFFF;

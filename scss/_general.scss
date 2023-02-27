@@ -332,28 +332,17 @@ input.error {
     border-radius: 133.884px;
 
     .toggle__item {
+        display: block; 
         flex-basis: 50%; 
         text-align: center;
         padding: 0;
-        position: relative;
-        cursor: pointer;
-        
-        & span {
-            display: block; 
-            font-weight: $font-weight-medium;
-            font-size: 16px;
-            line-height: 38px; 
-            color: $black;
-        }
+        position: relative; 
+        font-weight: $font-weight-medium;
+        font-size: 16px;
+        line-height: 38px; 
+        color: $black;
 
-        & input[type='radio'] {
-            opacity: 0;
-            outline: none;
-            position: absolute;
-            z-index: -1;
-        }
-
-        & input[type='radio']:checked + span {
+        &--active {
             background-color: $main;
             border-radius: 133.884px; 
             color: $white;
