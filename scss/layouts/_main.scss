@@ -521,6 +521,14 @@
             margin-bottom: 20px;
         }
 
+        ul.info_block__description {
+            list-style: disc;
+
+            li {
+                margin-left: 25px; 
+            }
+        }
+
         .info_block__button {
             max-width: 190px;
             width: 100%;
@@ -542,6 +550,10 @@
 
 .mobile__events {
     display: none;
+
+    .events_on_date .events__item {
+        background-color: $white;
+    }
 }
 
 .my_cabinet__nav_mobile {
@@ -570,7 +582,7 @@
                 display: block; 
                 padding: 6px 12px;
                 border: 1px solid $main;
-            border-radius: 5px;
+                border-radius: 5px;
             }
 
             input[type=radio] {
@@ -614,5 +626,141 @@
         display: block;
         @include font(500, 14px, 16px);
         margin-bottom: 15px;
+    }
+}
+
+.modal_window__content {
+    .choice {
+        .choice__item {
+            background-color: $bg;
+            border-radius: 10px;
+            padding: 15px;
+            width: 100%;
+            @include flex-space-between-align-start;
+            @include transition(0.4s);
+
+            &:hover {
+                transform: scale(0.98);
+            }
+
+            .item__info_name {
+                @include font(500, 16px, 19px);
+            }
+
+            .item__info_bithdate,
+            .item__card_number {
+                @include font(400, 14px, 16px);
+            } 
+        }
+        .choice__item + .choice__item {
+            margin-top: 10px;
+        }
+    }
+}
+
+.specialization__section {
+    .transition_to_sections {
+        max-width: 405px;
+        width: 100%;
+
+        .transition_to_sections__link {
+            &:nth-child(1) .transition_to_sections__icon_wrapper {
+                height: 40px;
+                background-color: $main;
+            } 
+        }
+
+        .buttons_wrapper {
+            display: none;
+            width: 100%;
+
+            .button {
+                @include font(500, 16px, 18px);
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        } 
+    }
+}
+
+.arrow_right { 
+    width: 10px;
+    height: 10px; 
+    transform: rotate(-45deg);
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid $black;
+    border-bottom: 2px solid $black; 
+    transition: all .4s ease;
+
+    &:hover { 
+        border-right: 2.5px solid $black;
+        border-bottom: 2.5px solid $black; 
+    }
+}
+
+.events_history {
+    .events_on_date {
+        .events__item {
+            background-color: $white;
+            padding: 20px 40px 20px 15px;
+            position: relative;
+
+            &.mark::after {
+                position: absolute;
+                content: "";
+                top: -3px;
+                right: -3px;
+                width: 11px;
+                height: 11px;
+                background-color: #ff1e1e;
+                border-radius: 50%;
+            }
+           
+            &:hover {
+                transform: none;
+            }
+
+            .event__alert {
+                background-color: #FFD5D5;
+                color: inherit;
+                @include font(400, 12px, 14px); 
+                margin-top: 10px;
+            }
+
+            .event__inner {
+                margin-bottom: 0;
+                align-items: center;
+
+                .event__icon {
+                    font-size: 24px;
+                    color: #D8D8D8;
+                }
+            }
+
+            .event__arrow_link{
+                position: absolute;
+                top: calc(50% - 5px);
+                right: 20px; 
+
+                .arrow_right {
+                    position: absolute;
+                    top: 0;
+                    right: 0; 
+
+                    &:hover { 
+                        right: -2px; 
+                    }
+                }
+            } 
+
+            .event__icon_link {
+                @include transition(0.4s); 
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
     }
 }

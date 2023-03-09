@@ -20,7 +20,9 @@
     .header .header__container,
     .add_to_screen_block,
     .mobile__events,
-    .my_cabinet__nav_mobile {
+    .my_cabinet__nav_mobile,
+    .general_medical_cards .general_medical_cards__footer_mobile,
+    .specialization__section .transition_to_sections .buttons_wrapper {
         display: block;
     }
     
@@ -28,9 +30,10 @@
     .footer, 
     .sidebar,
     .calendar__wrapper, 
-    .info_block,
+    // .info_block,
     .my_cabinet__nav,
-    .medical_cards_section__list_years {
+    .medical_cards_section__list_years,
+    .general_medical_cards__footer {
         display: none; 
     }
 
@@ -71,6 +74,26 @@
                     }
                 } 
             }
+        }
+    }
+
+    .info_block {
+        border-radius: 0;
+
+        .info_block__img {
+            display: none;
+        }
+
+        .info_block__info {
+            .info_block__button {
+                max-width: 320px;
+
+                .button {
+                    @include font(500, 16px, 18px);
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                }
+            } 
         }
     }
 

@@ -155,7 +155,7 @@
             </div> 
         </div>
     </section>
-    <section class="cabinet_wrapper">
+    <section class="cabinet_wrapper"> 
         <aside class="sidebar_my_cabinet sidebar">
             <div class="sidebar__wrapper">
                 <nav class="sidebar__nav pb-30">
@@ -295,198 +295,131 @@
                 <!-- Контент для Мой кабинет -->
                 <section class="my_cabinet"> 
                     <div class="my_cabinet__wrapper"> 
-                        <div class="patient_info mb-30">
-                            <div class="patient_info__avatar mr-10">
-                                <!-- <img src="../img/avatar2.jpeg" alt="avatar"> -->
-                                <img src="../svg/content/default-avatar.svg" alt="avatar">
+                        <section class="specialization__section">
+                            <nav class="my_cabinet__nav mb-30">
+                                <ul class="bread_crumbs">
+                                    <li class="bread_crumbs__item">
+                                        <a class="bread_crumbs__link" href="#">Главная</a>
+                                    </li>
+                                    <li class="bread_crumbs__item">
+                                        <a class="bread_crumbs__link" href="#">Медицинская карта</a>
+                                    </li>
+                                    <li class="bread_crumbs__item">Гастроентерология</li>
+                                </ul>
+                            </nav>
+                            <nav class="my_cabinet__nav_mobile mb-20"> 
+                                <a class="back_to" href="#">Медицинская карта</a> 
+                            </nav>
+                            <div class="specialization_section__title_wrapper mb-30">
+                                <h2 class="section__title">Гастроентерология</h2> 
                             </div>
-                            <div class="patient_info__text">
-                                <h2 class="cabinet__title pb-5">Здравствуйте, Валерий!</h2>
-                                <p class="cabinet__paragraph">
-                                    Медицинская карта № 456754
-                                </p>
-                            </div> 
-                        </div>
-                        <div class="reminders">
-                            <div class="reminder_item mb-10">
-                                <div class="reminder_item__block">
-                                    <h4 class="reminder_item__title">Близится прием к врачу!</h4>
-                                    <p class="reminder_item__text">
-                                        Напоминаем, что 20.02.23 на 14.00 у вас запланирована консультация гастроентеролога...
-                                    </p>
-                                </div>
-                                <span class="reminder_item__time">09:06</span>
-                                <img class="close_button" src="../svg/icons/close.svg" alt="close button">
-                            </div>
-                        </div>
-                        <div class="general_medical_cards">
-                            <div class="general_medical_cards__header mb-20">
-                                <h3 class="general_medical_cards__title">Медицинская карта</h3>
-                                <div class="general_medical_cards__button">
-                                    <button class="button button-white">Больше</button>
-                                </div>
-                            </div>
-                            <div class="medical_cards">
-                                <a href="#" class="medical_cards__item card">
-                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
-                                    <span class="card__info">
-                                        <span class="card__datetime">
-                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
-                                        </span>
-                                        <span class="card__name">Гастроентерология</span>
-                                    </span> 
+                            <div class="transition_to_sections">
+                                <a href="#" class="transition_to_sections__link">
+                                    <span class="transition_to_sections__icon_wrapper">
+                                        <span class="transition_to_sections__icon icon-list"></span>
+                                    </span>
+                                    <span class="transition_to_sections__description">
+                                        <span class="transition_to_sections__name">Назначенные препараты</span>
+                                        <span class="transition_to_sections__text">Список лекарств, с которым удобно ходить в аптеку</span>
+                                    </span>
                                 </a>
-                                <a href="#" class="medical_cards__item card">
-                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
-                                    <span class="card__info">
-                                        <span class="card__datetime">
-                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
-                                        </span>
-                                        <span class="card__name">Пульмонология</span>
-                                    </span> 
-                                </a>
-                                <a href="#" class="medical_cards__item card">
-                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
-                                    <span class="card__info"> 
-                                        <span class="card__name">Проктология</span>
-                                    </span> 
-                                </a>
-                            </div>
-                            <!-- Мед карты для мобильной версии -->
-                            <!-- Здесь будет слайдер -->
-                            <div class="medical_cards__modile">
-                                <!-- item for slider -->
-                                <a href="#" class="medical_cards__item card">
-                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
-                                    <span class="card__info">
-                                        <span class="card__datetime">
-                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
-                                        </span>
-                                        <span class="card__name">Гастроентерология</span>
-                                    </span> 
-                                </a>
-                                <!-- <a href="#" class="medical_cards__item card">
-                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
-                                    <span class="card__info">
-                                        <span class="card__datetime">
-                                            <span class="card__datetime_icon icon-time"></span>16.08.23 14:00
-                                        </span>
-                                        <span class="card__name">Пульмонология</span>
-                                    </span> 
-                                </a>
-                                <a href="#" class="medical_cards__item card">
-                                    <img class="card__img" src="../svg/content/catalog-active.svg" alt="active catalog image">
-                                    <span class="card__info"> 
-                                        <span class="card__name">Проктология</span>
-                                    </span> 
-                                </a> -->
-                            </div>
-                            <!-- end Слайдер, Мед карты для мобильной версии -->
-                            <div class="general_medical_cards__footer">
-                                <button class="button button-main">Новое обращение</button>
-                            </div>
-                            <div class="buttons_wrapper general_medical_cards__footer_mobile">
-                                <button class="button button-olive mb-10">Новое обращение</button>
-                                <button class="button button-main mb-10">Видеоконсультация</button>
-                                <button class="button button-white">Оставить отзыв</button>
-                            </div>
-                        </div>
-                        <div class="transition_to_sections flex">
-                            <a href="#" class="transition_to_sections__link">
-                                <span class="transition_to_sections__icon_wrapper">
-                                    <span class="transition_to_sections__icon icon-file-text-plus"></span>
-                                </span>
-                                <span class="transition_to_sections__description">
-                                    <span class="transition_to_sections__name">Медицинские документы</span>
-                                    <span class="transition_to_sections__text">Консультативные выводы врачей, результаты анализов и обследований</span>
-                                </span>
-                            </a>
-                            <a href="#" class="transition_to_sections__link">
-                                <span class="transition_to_sections__icon_wrapper">
-                                    <span class="transition_to_sections__icon icon-camera"></span>
-                                </span>
-                                <span class="transition_to_sections__description">
-                                    <span class="transition_to_sections__name">Видео-кабинет</span>
-                                    <span class="transition_to_sections__text">Видео-консультации со специалистом, записи предыдущих консультаций</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="info_block mb-50">
-                            <div class="info_block__info">
-                                <h4 class="info_block__title">Выберите семейного врача!</h4>
-                                <p class="info_block__description">
-                                    Заключите декларацию с семейным врачом и пользуйтесь программой Государственных гарантий в ОН Клиник
-                                </p>
-                                <div class="info_block__button">
+                                <div class="buttons_wrapper mt-20">
                                     <button class="button button-olive">Записаться на прием</button>
+                                </div> 
+                            </div> 
+                            <div class="events mobile__events mb-50">
+                                <h4 class="events__title">Предстоящие визиты</h4>
+                                <div class="events_on_date">
+                                    <span class="events_on_date__date">18 января</span>
+                                    <a href="#" class="events__item event">
+                                        <div class="event__inner">
+                                            <div class="event__text">Общий анализ крови</div>
+                                            <div class="event__time">09:00</div>
+                                        </div>
+                                        <div class="event__alert">
+                                            <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
+                                        </div>
+                                    </a>
+                                    <a href="#" class="events__item event">
+                                        <div class="event__inner">
+                                            <div class="event__text">Компьютерная томография</div>
+                                            <div class="event__time">10:00</div>
+                                        </div> 
+                                    </a>
+                                    <a href="#" class="events__item event">
+                                        <div class="event__inner">
+                                            <div class="event__text">Видео-консультация гастроентеролога</div>
+                                            <div class="event__time">
+                                                <span class="event__time_icon icon-camera"></span>
+                                                10:00
+                                            </div>
+                                        </div> 
+                                    </a>
+                                </div>
+                                <div class="events_on_date">
+                                    <span class="events_on_date__date">25 января</span>
+                                    <a href="#" class="events__item event">
+                                        <div class="event__inner">
+                                            <div class="event__text">Колоноскопия</div>
+                                            <div class="event__time">09:00</div>
+                                        </div>
+                                        <div class="event__alert">
+                                            <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
+                                        </div>
+                                    </a>
+                                    <a href="#" class="events__item event">
+                                        <div class="event__inner">
+                                            <div class="event__text">Консультация гастроентеролога</div>
+                                            <div class="event__time">10:00</div>
+                                        </div> 
+                                    </a> 
                                 </div>
                             </div>
-                            <div class="info_block__img">
-                                <img src="../svg/content/family-doctor.svg" alt="family doctor picture">
+                            <div class="events events_history mb-40">
+                                <h4 class="events__title">История визитов в клинику</h4>
+                                <div class="events_on_date">
+                                    <span class="events_on_date__date">22 января</span> 
+                                    <div class="events__item event mark">
+                                        <div class="event__inner">
+                                            <div class="event__text">Компьютерная томография</div>
+                                            <a href="#" class="event__icon_link">
+                                                <span class="event__icon icon-file-text-plus"></span>
+                                            </a> 
+                                        </div> 
+                                        <a href="#" class="event__arrow_link">
+                                            <span class="arrow_right"></span>
+                                        </a> 
+                                    </div>
+                                    <div class="events__item event">
+                                        <div class="event__inner">
+                                            <div class="event__text">Консультация гастроентеролога</div>
+                                            <a href="#" class="event__icon_link">
+                                                <span class="event__icon icon-file-text-plus"></span>
+                                            </a> 
+                                        </div> 
+                                        <a href="#" class="event__arrow_link">
+                                            <span class="arrow_right"></span>
+                                        </a> 
+                                    </div>
+                                    <div class="events__item event">
+                                        <div class="event__inner">
+                                            <div class="event__text">
+                                                Консультация гастроентеролога
+                                                <div class="event__alert">
+                                                    <span class="event__alert_icon icon-cancel-circle"></span>Не пришел на прием
+                                                </div>
+                                            </div>
+                                            <a href="#" class="event__icon_link">
+                                                <span class="event__icon icon-file-text-plus"></span>
+                                            </a> 
+                                        </div> 
+                                        <a href="#" class="event__arrow_link">
+                                            <span class="arrow_right"></span>
+                                        </a> 
+                                    </div>
+                                </div> 
                             </div>
-                        </div> 
-                    </div> 
-                    <div class="add_to_screen_block mb-40">
-                        <div class="add_to_screen__wrapper">
-                            <img class="close_button" src="../svg/icons/close.svg" alt="close button">
-                            <div class="add_to_screen__wrapper_content">
-                                <img class="add_to_screen__icon" src="../svg/icons/on-clinic.svg" alt="On Clinic icon">
-                                <p class="add_to_screen__text">Добавьте личный кабинет на главный экран и храните все записи всегда под рукой!</p>
-                            </div> 
-                            <div class="buttons_wrapper">
-                                <button class="button button-olive">Добавить</button>
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="my_cabinet__wrapper"> 
-                        <div class="events mobile__events mb-40">
-                            <h4 class="events__title"Предстоящие визиты</h4>
-                            <div class="events_on_date">
-                                <span class="events_on_date__date">18 января</span>
-                                <a href="#" class="events__item event">
-                                    <div class="event__inner">
-                                        <div class="event__text">Общий анализ крови</div>
-                                        <div class="event__time">09:00</div>
-                                    </div>
-                                    <div class="event__alert">
-                                        <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
-                                    </div>
-                                </a>
-                                <a href="#" class="events__item event">
-                                    <div class="event__inner">
-                                        <div class="event__text">Компьютерная томография</div>
-                                        <div class="event__time">10:00</div>
-                                    </div> 
-                                </a>
-                                <a href="#" class="events__item event">
-                                    <div class="event__inner">
-                                        <div class="event__text">Видео-консультация гастроентеролога</div>
-                                        <div class="event__time">
-                                            <span class="event__time_icon icon-camera"></span>
-                                            10:00
-                                        </div>
-                                    </div> 
-                                </a>
-                            </div>
-                            <div class="events_on_date">
-                                <span class="events_on_date__date">25 января</span>
-                                <a href="#" class="events__item event">
-                                    <div class="event__inner">
-                                        <div class="event__text">Колоноскопия</div>
-                                        <div class="event__time">09:00</div>
-                                    </div>
-                                    <div class="event__alert">
-                                        <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
-                                    </div>
-                                </a>
-                                <a href="#" class="events__item event">
-                                    <div class="event__inner">
-                                        <div class="event__text">Консультация гастроентеролога</div>
-                                        <div class="event__time">10:00</div>
-                                    </div> 
-                                </a> 
-                            </div>
-                        </div>
+                        </section>
                     </div> 
                 </section> 
                 <!-- end Контент для Мой кабинет -->

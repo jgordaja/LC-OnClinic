@@ -20,10 +20,10 @@
                     </a>
                 </div> 
                 <ul class="header__menu menu">
-                    <li class="menu__item menu__item--active">
+                    <li class="menu__item">
                         <a href="#" class="menu__link">Мой кабинет</a>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item menu__item--active">
                         <a href="#" class="menu__link">Мои дети</a> 
                     </li>
                 </ul>
@@ -295,13 +295,18 @@
                 <!-- Контент для Мой кабинет -->
                 <section class="my_cabinet"> 
                     <div class="my_cabinet__wrapper"> 
+                        <nav class="my_cabinet__nav mb-30"> 
+                            <a class="back_to" href="#">Вернуться в свой аккаунт</a> 
+                        </nav>
+                        <nav class="my_cabinet__nav_mobile mb-20"> 
+                            <a class="back_to" href="#">Вернуться в свой аккаунт</a> 
+                        </nav>
                         <div class="patient_info mb-30">
-                            <div class="patient_info__avatar mr-10">
-                                <!-- <img src="../img/avatar2.jpeg" alt="avatar"> -->
+                            <div class="patient_info__avatar mr-10"> 
                                 <img src="../svg/content/default-avatar.svg" alt="avatar">
                             </div>
                             <div class="patient_info__text">
-                                <h2 class="cabinet__title pb-5">Здравствуйте, Валерий!</h2>
+                                <h2 class="cabinet__title pb-5">Шевченко Тарас Григорович</h2>
                                 <p class="cabinet__paragraph">
                                     Медицинская карта № 456754
                                 </p>
@@ -413,7 +418,7 @@
                         </div>
                         <div class="info_block mb-50">
                             <div class="info_block__info">
-                                <h4 class="info_block__title">Выберите семейного врача!</h4>
+                                <h4 class="info_block__title">Выберите педиатра!</h4>
                                 <p class="info_block__description">
                                     Заключите декларацию с семейным врачом и пользуйтесь программой Государственных гарантий в ОН Клиник
                                 </p>
@@ -425,6 +430,57 @@
                                 <img src="../svg/content/family-doctor.svg" alt="family doctor picture">
                             </div>
                         </div> 
+
+                        <!-- Остальные подобные карточки info_block оставлю здесь -->
+                        <div class="info_block mb-50">
+                            <div class="info_block__info">
+                                <h4 class="info_block__title">Готовы результаты анализов!</h4>
+                                <p class="info_block__description">
+                                    Запишитесь на прием к доктору для назначения лечения
+                                </p>
+                                <div class="info_block__button">
+                                    <button class="button button-olive">Записаться на прием</button>
+                                </div>
+                            </div>
+                            <div class="info_block__img">
+                                <img src="../svg/content/laboratory.svg" alt="laboratory picture">
+                            </div>
+                        </div> 
+
+                        <div class="info_block mb-50">
+                            <div class="info_block__info">
+                                <h4 class="info_block__title">Рекомендованы анализы в Он Клиник!</h4>
+                                <ul class="info_block__description">
+                                    Вам рекомендована лабораторные исследования:        
+                                    <li>Пакет 01.11 “Тиреоидный (ТТГ, Т4 своб, АТ ТПО)</li>
+                                    <li>Общий анализ крови</li>
+                                </ul>
+                                <div class="info_block__button">
+                                    <button class="button button-olive">Записаться на прием</button>
+                                </div>
+                            </div>
+                            <div class="info_block__img">
+                                <img src="../svg/content/laboratory.svg" alt="laboratory picture">
+                            </div>
+                        </div> 
+
+                        <div class="info_block mb-50">
+                            <div class="info_block__info">
+                                <h4 class="info_block__title">Рекомендован повторный визит!</h4>
+                                <p class="info_block__description">
+                                    Вам рекомендована повторная консультация доктора Фамилия И.О. на 26.02.23
+                                </p>
+                                <div class="info_block__button">
+                                    <button class="button button-olive">Записаться на прием</button>
+                                </div>
+                            </div>
+                            <div class="info_block__img">
+                                <img src="../svg/content/family-doctor.svg" alt="family doctor picture">
+                            </div>
+                        </div> 
+
+                        <!-- end -->
+
                     </div> 
                     <div class="add_to_screen_block mb-40">
                         <div class="add_to_screen__wrapper">
@@ -440,7 +496,7 @@
                     </div>
                     <div class="my_cabinet__wrapper"> 
                         <div class="events mobile__events mb-40">
-                            <h4 class="events__title"Предстоящие визиты</h4>
+                            <h4 class="events__title">Предстоящие визиты</h4>
                             <div class="events_on_date">
                                 <span class="events_on_date__date">18 января</span>
                                 <a href="#" class="events__item event">
@@ -524,7 +580,7 @@
                         </li>
                         <li class="menu__item">
                             <a href="#" class="menu__link">
-                                <span class="footer_mobile__icon icon-user"></span>
+                                <span class="footer_mobile__icon icon-user mark"></span>
                                 Профиль
                             </a>
                         </li>
