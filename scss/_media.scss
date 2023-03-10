@@ -30,7 +30,7 @@
     .footer, 
     .sidebar,
     .calendar__wrapper, 
-    // .info_block,
+    .info_block,
     .my_cabinet__nav,
     .medical_cards_section__list_years,
     .general_medical_cards__footer {
@@ -224,6 +224,60 @@
 
         .medical_cards_section__list_years {
             display: none;
+        }
+    }
+
+    .visit__section {
+        .visit__datetime_and_doctor,
+        .visit__payment {
+            margin-bottom: 25px;
+        }
+        
+        .visit__block {
+            .visit_block__actions {
+                max-width: 135px;
+
+                .button {
+                    @include font(500, 14px, 18px);
+                }
+
+                &.button_see_map {
+                    display: none;
+                }
+
+                &.link_see_map {
+                    display: block;
+                }
+            }
+        }
+
+        .visit__recommended_examinations,
+        .visit__prescribed_medications { 
+            .visit__title {
+                margin-bottom: 15px;
+            } 
+        }
+
+        .visit__recommended_examinations .recommended_examinations__list,
+        .visit__prescribed_medications  .prescribed_medications__list {
+            display: none;
+        }
+
+        .visit__recommended_examinations .recommended_examinations__list_mobile,
+        .visit__prescribed_medications  .prescribed_medications__list_mobile {
+            display: block;
+        }
+
+        .visit__attachements .attachements__item .attachement__inner {
+            .attachement__text {
+                .attachement__title {
+                    @include font(400, 10px, 12px);
+                }
+
+                .attachement__description {
+                    @include font(500, 14px, 16px); 
+                }
+            }
         }
     }
 }

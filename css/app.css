@@ -286,6 +286,10 @@ button[disabled] {
   cursor: not-allowed;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .pt-5 {
   padding-top: 5px;
 }
@@ -320,6 +324,10 @@ button[disabled] {
 
 .pt-60 {
   padding-top: 60px;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .pb-5 {
@@ -406,6 +414,10 @@ button[disabled] {
   padding-right: 30px;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .mt-5 {
   margin-top: 5px;
 }
@@ -432,6 +444,10 @@ button[disabled] {
 
 .mt-60 {
   margin-top: 60px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-5 {
@@ -801,6 +817,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+  max-width: 500px;
 }
 
 .modal_window {
@@ -1733,11 +1750,11 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
 }
 .cabinet_not_active__wrapper .cabinet_not_active .confirmation .confirmation__link {
   display: block;
-  background-color: #FFFFFF;
   max-width: 160px;
   width: 100%;
   text-align: center;
   padding: 15px 0;
+  background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
@@ -1791,6 +1808,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
 }
 .add_to_screen_block .add_to_screen__wrapper .add_to_screen__icon {
   max-width: 51px;
@@ -1803,9 +1821,15 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   padding-right: 30px;
 }
 .add_to_screen_block .add_to_screen__wrapper .buttons_wrapper {
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
   max-width: 320px;
   width: 100%;
+}
+.add_to_screen_block .add_to_screen__wrapper .buttons_wrapper .button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 12px 0;
 }
 
 .close_button {
@@ -1889,7 +1913,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   margin-bottom: 50px;
 }
 .reminders .reminder_item {
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
@@ -2090,9 +2114,9 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
           align-items: center;
   -ms-flex-item-align: stretch;
       align-self: stretch;
-  background-color: #FFFFFF;
   width: 100%;
   padding: 20px;
+  background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
@@ -2160,7 +2184,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
       -ms-flex-align: center;
           align-items: center;
   padding: 25px 25px 20px 25px;
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
@@ -2362,6 +2386,20 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   border-bottom: 2.5px solid #000000;
 }
 
+.arrow_right_link {
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 20px;
+}
+.arrow_right_link .arrow_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.arrow_right_link .arrow_right:hover {
+  right: -2px;
+}
+
 .events_history .events_on_date .events__item {
   background-color: #FFFFFF;
   padding: 20px 40px 20px 15px;
@@ -2400,19 +2438,6 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   font-size: 24px;
   color: #D8D8D8;
 }
-.events_history .events_on_date .events__item .event__arrow_link {
-  position: absolute;
-  top: calc(50% - 5px);
-  right: 20px;
-}
-.events_history .events_on_date .events__item .event__arrow_link .arrow_right {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.events_history .events_on_date .events__item .event__arrow_link .arrow_right:hover {
-  right: -2px;
-}
 .events_history .events_on_date .events__item .event__icon_link {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -2422,6 +2447,437 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.underline {
+  border-bottom: 1px solid #D1D1D1;
+}
+
+.visit__section .visit__datetime_and_doctor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 35px;
+  margin-bottom: 20px;
+}
+.visit__section .visit__datetime_and_doctor .visit__dateime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  background-color: #1B6EBE;
+  border-radius: 100px;
+  padding: 5px 7px;
+  margin-right: 30px;
+}
+.visit__section .visit__datetime_and_doctor .visit__dateime .visit_dateime_icon {
+  font-size: 18px;
+  padding-right: 7px;
+}
+.visit__section .visit__datetime_and_doctor .visit__doctor.doctor_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.visit__section .visit__datetime_and_doctor .visit__doctor.doctor_info .doctor_info__avatar {
+  position: relative;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 7px;
+}
+.visit__section .visit__datetime_and_doctor .visit__doctor.doctor_info .doctor_info__avatar::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.visit__section .visit__datetime_and_doctor .visit__doctor.doctor_info .doctor_info__avatar .doctor_info__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.visit__section .visit__datetime_and_doctor .visit__doctor.doctor_info .doctor_info__text .doctor_info__position {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+}
+.visit__section .visit__datetime_and_doctor .visit__doctor.doctor_info .doctor_info__text .doctor_info__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.visit__section .visit__clinic {
+  margin-bottom: 25px;
+}
+.visit__section .visit__payment {
+  margin-bottom: 30px;
+}
+.visit__section .visit__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 25px;
+}
+.visit__section .visit__block .visit_block__info .info__title {
+  padding-bottom: 8px;
+}
+.visit__section .visit__block .visit_block__info .info_description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.visit__section .visit__block .visit_block__actions {
+  max-width: 160px;
+  width: 100%;
+}
+.visit__section .visit__block .visit_block__actions .button {
+  width: 100%;
+}
+.visit__section .visit__block .visit_block__actions.link_see_map {
+  display: none;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.visit__section .visit__block .visit_block__actions.link_see_map .icon_see_map {
+  color: #1B6EBE;
+  font-size: 20px;
+}
+.visit__section .visit__block .visit_block__actions.actions_text {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.visit__section .visit__block .visit_block__actions.actions_text .is-paid {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.visit__section .visit__block .visit_block__actions.actions_text .is-paid::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -15px;
+  width: 5px;
+  height: 10px;
+  border-right: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.visit__section .visit__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+.visit__section .block_list {
+  width: 100%;
+}
+.visit__section .block_list .block_list__header,
+.visit__section .block_list .block_list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.visit__section .block_list .header_item,
+.visit__section .block_list .list_item {
+  padding-left: 15px;
+}
+.visit__section .block_list .list_item:nth-of-type(1) {
+  font-weight: 500;
+}
+.visit__section .block_list .list_item:nth-of-type(4) {
+  padding-right: 15px;
+}
+.visit__section .block_list .block_list__header {
+  text-align: start;
+  margin-bottom: 10px;
+}
+.visit__section .block_list .block_list__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+.visit__section .block_list .block_list__item + .block_list__item {
+  margin-top: 8px;
+}
+.visit__section .visit__recommended_examinations {
+  margin-bottom: 35px;
+}
+.visit__section .visit__recommended_examinations .visit__title {
+  margin-bottom: 20px;
+}
+.visit__section .visit__recommended_examinations .block_list .block_list__header {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+.visit__section .visit__recommended_examinations .block_list .header_item:nth-of-type(1),
+.visit__section .visit__recommended_examinations .block_list .list_item:nth-of-type(1) {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+.visit__section .visit__recommended_examinations .block_list .header_item:nth-of-type(2),
+.visit__section .visit__recommended_examinations .block_list .list_item:nth-of-type(2) {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+.visit__section .visit__recommended_examinations .block_list .header_item:nth-of-type(3),
+.visit__section .visit__recommended_examinations .block_list .list_item:nth-of-type(3) {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.visit__section .visit__recommended_examinations .recommended_examinations__list_mobile {
+  display: none;
+}
+.visit__section .visit__recommended_examinations .recommended_examinations__list_mobile .recommended_examinations__item {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  padding: 15px;
+}
+.visit__section .visit__recommended_examinations .recommended_examinations__list_mobile .recommended_examinations__item .recommended_examinations__item_title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 13px;
+}
+.visit__section .visit__recommended_examinations .recommended_examinations__list_mobile .recommended_examinations__item .recommended_examinations__item_block .item_title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding-bottom: 5px;
+}
+.visit__section .visit__recommended_examinations .recommended_examinations__list_mobile .recommended_examinations__item .recommended_examinations__item_block .item_description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.visit__section .visit__recommended_examinations .recommended_examinations__list_mobile .recommended_examinations__item .recommended_examinations__item_block + .recommended_examinations__item_block {
+  margin-top: 15px;
+}
+.visit__section .visit__recommended_examinations .recommended_examinations__list_mobile .recommended_examinations__item + .recommended_examinations__item {
+  margin-top: 10px;
+}
+.visit__section .visit__prescribed_medications {
+  margin-bottom: 40px;
+}
+.visit__section .visit__prescribed_medications .visit__title {
+  margin-bottom: 20px;
+}
+.visit__section .visit__prescribed_medications .block_list .block_list__header {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+}
+.visit__section .visit__prescribed_medications .block_list .header_item:nth-of-type(1),
+.visit__section .visit__prescribed_medications .block_list .list_item:nth-of-type(1) {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+.visit__section .visit__prescribed_medications .block_list .header_item:nth-of-type(2),
+.visit__section .visit__prescribed_medications .block_list .list_item:nth-of-type(2) {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
+.visit__section .visit__prescribed_medications .block_list .header_item:nth-of-type(3),
+.visit__section .visit__prescribed_medications .block_list .list_item:nth-of-type(3) {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+.visit__section .visit__prescribed_medications .block_list .header_item:nth-of-type(4),
+.visit__section .visit__prescribed_medications .block_list .list_item:nth-of-type(4) {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.visit__section .visit__prescribed_medications .prescribed_medications__list_mobile {
+  display: none;
+}
+.visit__section .visit__prescribed_medications .prescribed_medications__list_mobile .prescribed_medications__item + .prescribed_medications__item {
+  margin-top: 10px;
+}
+.visit__section .visit__prescribed_medications .prescribed_medications__list_mobile .prescribed_medications__item {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  padding: 15px;
+}
+.visit__section .visit__prescribed_medications .prescribed_medications__list_mobile .prescribed_medications__item .prescribed_medications__item_title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 6px;
+}
+.visit__section .visit__prescribed_medications .prescribed_medications__list_mobile .prescribed_medications__item .prescribed_medications__item_block {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+.visit__section .visit__prescribed_medications .prescribed_medications__list_mobile .prescribed_medications__item .prescribed_medications__item_block .e_prescription {
+  width: 100%;
+}
+.visit__section .visit__prescribed_medications .prescribed_medications__list_mobile .prescribed_medications__item .prescribed_medications__item_block + .prescribed_medications__item_block {
+  margin-top: 6px;
+}
+.visit__section .visit__attachements .visit__title {
+  margin-bottom: 10px;
+}
+.visit__section .visit__attachements .attachements__item {
+  position: relative;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 15px 40px 15px 15px;
+}
+.visit__section .visit__attachements .attachements__item .attachement__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.visit__section .visit__attachements .attachements__item .attachement__inner .attachement__icon_wrapper {
+  padding-right: 15px;
+  color: #B7B308;
+  font-size: 28px;
+  margin-right: 15px;
+}
+.visit__section .visit__attachements .attachements__item .attachement__inner .attachement__text .attachement__title {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding-bottom: 5px;
+}
+.visit__section .visit__attachements .attachements__item .attachement__inner .attachement__text .attachement__description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+.visit__section .visit__attachements.recommendations .attachements__item .attachement__inner .attachement__text .attachement__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 0;
+}
+.visit__section .visit__attachements.recommendations .attachements__item .attachement__inner .attachement__icon_wrapper {
+  position: relative;
+  background-color: #1B6EBE;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.visit__section .visit__attachements.recommendations .attachements__item .attachement__inner .attachement__icon_wrapper .attachement_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.e_prescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+  background-color: #1B6EBE;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 17px 5px 7px;
+  border-radius: 100px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+.e_prescription:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.e_prescription .e_prescription__icon {
+  font-size: 18px;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -2450,6 +2906,7 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   .footer,
   .sidebar,
   .calendar__wrapper,
+  .info_block,
   .my_cabinet__nav,
   .medical_cards_section__list_years,
   .general_medical_cards__footer {
@@ -2617,6 +3074,46 @@ input.error::-ms-input-placeholder { /* Microsoft Edge */
   }
   .medical_cards__section .medical_cards_section__list_years {
     display: none;
+  }
+  .visit__section .visit__datetime_and_doctor,
+  .visit__section .visit__payment {
+    margin-bottom: 25px;
+  }
+  .visit__section .visit__block .visit_block__actions {
+    max-width: 135px;
+  }
+  .visit__section .visit__block .visit_block__actions .button {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .visit__section .visit__block .visit_block__actions.button_see_map {
+    display: none;
+  }
+  .visit__section .visit__block .visit_block__actions.link_see_map {
+    display: block;
+  }
+  .visit__section .visit__recommended_examinations .visit__title,
+  .visit__section .visit__prescribed_medications .visit__title {
+    margin-bottom: 15px;
+  }
+  .visit__section .visit__recommended_examinations .recommended_examinations__list,
+  .visit__section .visit__prescribed_medications .prescribed_medications__list {
+    display: none;
+  }
+  .visit__section .visit__recommended_examinations .recommended_examinations__list_mobile,
+  .visit__section .visit__prescribed_medications .prescribed_medications__list_mobile {
+    display: block;
+  }
+  .visit__section .visit__attachements .attachements__item .attachement__inner .attachement__text .attachement__title {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .visit__section .visit__attachements .attachements__item .attachement__inner .attachement__text .attachement__description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 @media screen and (max-width: 768px) {

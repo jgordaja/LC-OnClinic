@@ -139,14 +139,12 @@
             margin: 0 auto;
 
             .confirmation__link {
-                display: block;
-                background-color: $white;
+                display: block; 
                 max-width: 160px;
                 width: 100%;
                 text-align: center;
                 padding: 15px 0;
-                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
-                border-radius: 5px;
+                @include white-card(5px);
                 @include transition(0.4s);
 
                 &:hover {
@@ -189,11 +187,12 @@
 
     .add_to_screen__wrapper {
         padding: 25px 20px;
-        position: relative;
+        position: relative; 
 
         .add_to_screen__wrapper_content {
             display: flex;
             align-items: center;
+            margin-bottom: 10px;
         }
 
         .add_to_screen__icon {
@@ -207,9 +206,14 @@
         }
 
         .buttons_wrapper {
-            margin: 10px auto 0 auto;
+            margin: 0 auto;
             max-width: 320px;
             width: 100%;
+
+            .button {
+                @include font(500, 16px, 18px);
+                padding: 12px 0;
+            }
         }
     }
 }
@@ -280,9 +284,7 @@
     margin-bottom: 50px;
 
     .reminder_item {
-        background-color: $white;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
-        border-radius: 10px;
+        @include white-card(10px);
         padding: 10px 40px 10px 20px;
         @include flex-space-between-align-start; 
         position: relative;
@@ -444,12 +446,10 @@
 
     .transition_to_sections__link {
         @include flex-flex-start-align-center; 
-        align-self: stretch;
-        background-color: $white; 
+        align-self: stretch; 
         width: 100%; 
         padding: 20px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
-        border-radius: 5px;
+        @include white-card(5px);
         @include transition(0.4s); 
 
         &:hover {
@@ -506,9 +506,7 @@
 .info_block {
     @include flex-space-between-align-center;
     padding: 25px 25px 20px 25px;
-    background-color: $white;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
-    border-radius: 10px;   
+    @include white-card(10px);  
     
     .info_block__info {
         .info_block__title {
@@ -699,6 +697,22 @@
     }
 }
 
+.arrow_right_link{
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 20px; 
+
+    .arrow_right {
+        position: absolute;
+        top: 0;
+        right: 0; 
+
+        &:hover { 
+            right: -2px; 
+        }
+    }
+} 
+
 .events_history {
     .events_on_date {
         .events__item {
@@ -738,22 +752,6 @@
                 }
             }
 
-            .event__arrow_link{
-                position: absolute;
-                top: calc(50% - 5px);
-                right: 20px; 
-
-                .arrow_right {
-                    position: absolute;
-                    top: 0;
-                    right: 0; 
-
-                    &:hover { 
-                        right: -2px; 
-                    }
-                }
-            } 
-
             .event__icon_link {
                 @include transition(0.4s); 
 
@@ -762,5 +760,386 @@
                 }
             }
         }
+    }
+}
+
+.underline {
+    border-bottom: 1px solid #D1D1D1;
+}
+
+.visit__section {
+    .visit__datetime_and_doctor{
+        @include flex-flex-start-align-center;
+        padding-bottom: 35px;
+        margin-bottom: 20px;
+
+        .visit__dateime { 
+            @include flex-space-between-align-center;
+            @include font(500, 12px, 14px);
+            color: $white;
+            background-color: $main;
+            border-radius: 100px;
+            padding: 5px 7px;
+            margin-right: 30px;
+
+            .visit_dateime_icon {
+                font-size: 18px;
+                padding-right: 7px;
+            }
+        }
+
+        .visit__doctor.doctor_info {
+            @include flex-flex-start-align-center;
+
+            .doctor_info__avatar {
+                position: relative;
+                width: 30px; 
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 7px;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    padding-top: 100%;
+                }
+
+                .doctor_info__img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 100%;
+                    height: 100%; 
+                    transform: translate(-50%, -50%); 
+                    object-fit: cover; 
+                    object-position: center;
+                }
+            }
+
+            .doctor_info__text { 
+                .doctor_info__position {
+                    @include font(400, 10px, 12px);
+                }
+
+                .doctor_info__name {
+                    @include font(500, 14px, 16px);
+                }
+            }
+        }
+    }
+
+    .visit__clinic {
+        margin-bottom: 25px;
+    }
+
+    .visit__payment {
+        margin-bottom: 30px;
+    }
+
+    .visit__block {
+        @include flex-space-between-align-end;
+        padding-bottom: 25px;
+
+        .visit_block__info {
+            .info__title {
+                padding-bottom: 8px;
+            }
+
+            .info_description {
+                @include font(400, 14px, 16px);
+            }
+        }
+
+        .visit_block__actions {
+            max-width: 160px;
+            width: 100%;
+
+            .button {
+                width: 100%;
+            }
+
+            &.link_see_map {
+                display: none;
+                max-width: fit-content;
+                
+                .icon_see_map {
+                    color: $main;
+                    font-size: 20px;
+                }
+            } 
+
+            &.actions_text {
+                max-width: fit-content;
+
+                .is-paid {
+                    position: relative;
+                    @include font(400, 14px, 16px);
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: -15px;
+                        width: 5px;
+                        height: 10px;
+                        border-right: 1.5px solid black;
+                        border-bottom: 1.5px solid black;
+                        transform: rotate(45deg)
+                    }
+                }
+            }
+        }
+    }
+
+    .visit__title {
+        @include font(500, 16px, 18px);
+    }
+
+    .block_list {
+        width: 100%;
+
+        .block_list__header,
+        .block_list__item {
+            @include flex-flex-start-align-start;
+        }
+
+        .header_item,
+        .list_item {
+            padding-left: 15px;
+        }
+
+        .list_item {
+            &:nth-of-type(1) {
+                font-weight: 500;
+            }
+
+            &:nth-of-type(4) {
+                padding-right: 15px;
+            }
+        }
+
+        .block_list__header { 
+            text-align: start; 
+            margin-bottom: 10px;
+        }
+
+        .block_list__item {
+            @include font(400, 14px, 16px); 
+            @include white-card(5px);
+            padding-top: 16px;
+            padding-bottom: 18px; 
+        }
+
+        .block_list__item + .block_list__item {
+            margin-top: 8px;
+        }
+    }
+
+    .visit__recommended_examinations {
+        margin-bottom: 35px;
+
+        .visit__title {
+            margin-bottom: 20px;
+        }
+
+        .block_list {
+            .block_list__header {
+                @include font(400, 12px, 14px); 
+            }
+
+            .header_item,
+            .list_item {
+                &:nth-of-type(1) {
+                    flex-basis: 40%;
+                }
+    
+                &:nth-of-type(2) {
+                    flex-basis: 40%;
+                }
+    
+                &:nth-of-type(3) {
+                    flex-basis: 20%;
+                }
+            }
+        }
+
+        .recommended_examinations__list_mobile {
+            display: none;
+
+            .recommended_examinations__item {
+                @include white-card(5px);
+                padding: 15px;
+
+                .recommended_examinations__item_title {
+                    @include font(500, 14px, 16px); 
+                    margin-bottom: 13px;
+                }
+
+                .recommended_examinations__item_block {
+                    .item_title {
+                        @include font(400, 12px, 14px); 
+                        padding-bottom: 5px;
+                    }
+
+                    .item_description {
+                        @include font(400, 14px, 16px); 
+                    }
+                }
+
+                .recommended_examinations__item_block + .recommended_examinations__item_block {
+                    margin-top: 15px;
+                }
+            }
+
+            .recommended_examinations__item + .recommended_examinations__item {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .visit__prescribed_medications {
+        margin-bottom: 40px;
+
+        .visit__title {
+            margin-bottom: 20px;
+        }
+
+        .block_list { 
+            .block_list__header {
+                @include font(400, 10px, 12px); 
+            }
+    
+            .header_item,
+            .list_item {
+                &:nth-of-type(1) {
+                    flex-basis: 30%;
+                }
+    
+                &:nth-of-type(2) {
+                    flex-basis: 15%;
+                }
+    
+                &:nth-of-type(3) {
+                    flex-basis: 35%;
+                }
+    
+                &:nth-of-type(4) {
+                    flex-basis: 20%;
+                }
+            }
+        }
+
+        .prescribed_medications__list_mobile {
+            display: none;
+
+            .prescribed_medications__item + .prescribed_medications__item {
+                margin-top: 10px;
+            }
+
+            .prescribed_medications__item {
+                @include white-card(5px);
+                padding: 15px;
+
+                .prescribed_medications__item_title {
+                    @include font(500, 14px, 16px); 
+                    padding-bottom: 6px;
+                }
+
+                .prescribed_medications__item_block {
+                    @include font(400, 12px, 14px); 
+
+                    .e_prescription {
+                        width: 100%;
+                    }
+                }
+
+                .prescribed_medications__item_block + .prescribed_medications__item_block {
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+
+    .visit__attachements {
+        .visit__title {
+            margin-bottom: 10px;
+        }
+
+        .attachements__item {
+            position: relative;
+            @include white-card(10px);
+            @include flex-flex-start-align-start;
+            padding: 15px 40px 15px 15px;
+
+            .attachement__inner {
+                @include flex-flex-start-align-center; 
+
+                .attachement__icon_wrapper {
+                    padding-right: 15px;
+                    color: $secondery;
+                    font-size: 28px;
+                    margin-right: 15px;
+                }
+    
+                .attachement__text {
+                    .attachement__title {
+                        display: block;
+                        @include font(400, 12px, 14px);
+                        padding-bottom: 5px; 
+                    }
+    
+                    .attachement__description {
+                        @include font(500, 18px, 21px); 
+                    }
+                }
+            }
+        }
+
+        &.recommendations {
+            .attachements__item .attachement__inner .attachement__text .attachement__title {
+                @include font(500, 14px, 16px);
+                padding-bottom: 0;
+            }
+
+            .attachements__item .attachement__inner .attachement__icon_wrapper {
+                position: relative;
+                background-color: $main; 
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                margin-right: 15px;
+
+                .attachement_icon { 
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $white;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.e_prescription {
+    @include flex-flex-start-align-center;
+    color: $white;
+    background-color: $main; 
+    @include font(400, 12px, 14px); 
+    width: fit-content;
+    padding: 5px 17px 5px 7px;
+    border-radius: 100px;
+    @include transition(0.4s);
+    white-space: nowrap;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+
+    .e_prescription__icon { 
+        font-size: 18px;
+        margin-right: 5px;
     }
 }

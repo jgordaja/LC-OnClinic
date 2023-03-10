@@ -295,7 +295,7 @@
                 <!-- Контент для Мой кабинет -->
                 <section class="my_cabinet"> 
                     <div class="my_cabinet__wrapper"> 
-                        <section class="specialization__section">
+                        <section class="visit__section">
                             <nav class="my_cabinet__nav mb-30">
                                 <ul class="bread_crumbs">
                                     <li class="bread_crumbs__item">
@@ -304,123 +304,73 @@
                                     <li class="bread_crumbs__item">
                                         <a class="bread_crumbs__link" href="#">Медицинская карта</a>
                                     </li>
-                                    <li class="bread_crumbs__item">Гастроентерология</li>
+                                    <li class="bread_crumbs__item">
+                                        <a class="bread_crumbs__link" href="#">Гастроентерология</a>
+                                    </li>
+                                    <li class="bread_crumbs__item">Консультация гастроентеролога</li>
                                 </ul>
                             </nav>
                             <nav class="my_cabinet__nav_mobile mb-20"> 
-                                <a class="back_to" href="#">Медицинская карта</a> 
+                                <a class="back_to" href="#">Гастроентерология</a> 
                             </nav>
-                            <div class="specialization_section__title_wrapper mb-30">
-                                <h2 class="section__title">Гастроентерология</h2> 
-                            </div>
-                            <div class="transition_to_sections">
-                                <a href="#" class="transition_to_sections__link">
-                                    <span class="transition_to_sections__icon_wrapper">
-                                        <span class="transition_to_sections__icon icon-list"></span>
-                                    </span>
-                                    <span class="transition_to_sections__description">
-                                        <span class="transition_to_sections__name">Назначенные препараты</span>
-                                        <span class="transition_to_sections__text">Список лекарств, с которым удобно ходить в аптеку</span>
-                                    </span>
-                                </a>
-                                <div class="buttons_wrapper mt-20">
-                                    <button class="button button-olive">Записаться на прием</button>
-                                </div> 
+                            <div class="visit_section__title_wrapper mb-30">
+                                <h2 class="section__title">Консультация гастроентеролога</h2> 
                             </div> 
-                            <div class="events mobile__events mb-50">
-                                <h4 class="events__title">Предстоящие визиты</h4>
-                                <div class="events_on_date">
-                                    <span class="events_on_date__date">18 января</span>
-                                    <a href="#" class="events__item event">
-                                        <div class="event__inner">
-                                            <div class="event__text">Общий анализ крови</div>
-                                            <div class="event__time">09:00</div>
-                                        </div>
-                                        <div class="event__alert">
-                                            <span class="event__alert_icon icon-alert"></span>
-                                            Есть рекомендации перед сдачей
-                                        </div>
-                                    </a>
-                                    <a href="#" class="events__item event">
-                                        <div class="event__inner">
-                                            <div class="event__text">Компьютерная томография</div>
-                                            <div class="event__time">10:00</div>
-                                        </div> 
-                                    </a>
-                                    <a href="#" class="events__item event">
-                                        <div class="event__inner">
-                                            <div class="event__text">Видео-консультация гастроентеролога</div>
-                                            <div class="event__time">
-                                                <span class="event__time_icon icon-camera"></span>
-                                                10:00
-                                            </div>
-                                        </div> 
-                                    </a>
+                            <div class="visit__datetime_and_doctor underline">
+                                <div class="visit__dateime">
+                                    <span class="visit_dateime_icon icon-time"></span>
+                                    16.08.23 10:00
+                                </div> 
+                                <!-- на всех фотографиях лицо должно быть приблизительно в центре чтобы правильно кадрировалась и обрезалась аватарка -->
+                                <div class="visit__doctor doctor_info">
+                                    <div class="doctor_info__avatar">
+                                        <!-- <img class="doctor_info__img" src="../svg/content/default-avatar.svg" alt="default avatar"> -->
+                                        <img class="doctor_info__img" src="https://i.pinimg.com/originals/8a/de/fe/8adefe5af862b4f9cec286c6ee4722cb.jpg" alt="doctor avatar">
+                                    </div>
+                                    <div class="doctor_info__text">
+                                        <span class="doctor_info__position">Доктор</span>
+                                        <p class="doctor_info__name">Фамилия И.О.</p>
+                                    </div>
                                 </div>
-                                <div class="events_on_date">
-                                    <span class="events_on_date__date">25 января</span>
-                                    <a href="#" class="events__item event">
-                                        <div class="event__inner">
-                                            <div class="event__text">Колоноскопия</div>
-                                            <div class="event__time">09:00</div>
+                            </div>
+                            <div class="visit__block visit__clinic underline">
+                                <div class="visit_block__info info">
+                                    <h4 class="visit__title info__title">Клиника</h4>
+                                    <span class="info_description">ОН Клиник на Пушкинской</span>
+                                </div>
+                                <div class="visit_block__actions button_see_map">
+                                    <button class="button button-main">Посмотреть на карте</button> 
+                                </div> 
+                                <a href="#" class="visit_block__actions link_see_map">
+                                    <span class="icon_see_map icon-location-point"></span>
+                                </a> 
+                            </div>
+                            <div class="visit__block visit__payment underline">
+                                <div class="visit_block__info info">
+                                    <h4 class="visit__title info__title">Стоимость</h4>
+                                    <span class="info_description">460,00 грн</span>
+                                </div>
+                                <div class="visit_block__actions">
+                                    <button class="button button-olive">Оплатить</button>
+                                </div>
+                            </div> 
+                            <div class="visit__attachements attachements recommendations">
+                                <h4 class="visit__title">Рекомендации:</h4>
+                                <div class="attachements__item attachement">
+                                    <div class="attachement__inner">
+                                        <div class="attachement__icon_wrapper">
+                                            <span class="attachement_icon icon-info"></span>
                                         </div>
-                                        <div class="event__alert">
-                                            <span class="event__alert_icon icon-alert"></span>Есть рекомендации перед сдачей
+                                        <div class="attachement__text">
+                                            <span class="attachement__title">Рекомендации перед УЗИ ОБП</span> 
                                         </div>
-                                    </a>
-                                    <a href="#" class="events__item event">
-                                        <div class="event__inner">
-                                            <div class="event__text">Консультация гастроентеролога</div>
-                                            <div class="event__time">10:00</div>
-                                        </div> 
+                                    </div>
+                                    <a href="#" class="arrow_right_link">
+                                        <span class="arrow_right"></span>
                                     </a> 
                                 </div>
                             </div>
-                            <div class="events events_history mb-40">
-                                <h4 class="events__title">История визитов в клинику</h4>
-                                <div class="events_on_date">
-                                    <span class="events_on_date__date">22 января</span> 
-                                    <div class="events__item event mark">
-                                        <div class="event__inner">
-                                            <div class="event__text">Компьютерная томография</div>
-                                            <a href="#" class="event__icon_link">
-                                                <span class="event__icon icon-file-text-plus"></span>
-                                            </a> 
-                                        </div> 
-                                        <a href="#" class="arrow_right_link">
-                                            <span class="arrow_right"></span>
-                                        </a> 
-                                    </div>
-                                    <div class="events__item event">
-                                        <div class="event__inner">
-                                            <div class="event__text">Консультация гастроентеролога</div>
-                                            <a href="#" class="event__icon_link">
-                                                <span class="event__icon icon-file-text-plus"></span>
-                                            </a> 
-                                        </div> 
-                                        <a href="#" class="arrow_right_link">
-                                            <span class="arrow_right"></span>
-                                        </a> 
-                                    </div>
-                                    <div class="events__item event">
-                                        <div class="event__inner">
-                                            <div class="event__text">
-                                                Консультация гастроентеролога
-                                                <div class="event__alert">
-                                                    <span class="event__alert_icon icon-cancel-circle"></span>Не пришел на прием
-                                                </div>
-                                            </div>
-                                            <a href="#" class="event__icon_link">
-                                                <span class="event__icon icon-file-text-plus"></span>
-                                            </a> 
-                                        </div> 
-                                        <a href="#" class="arrow_right_link">
-                                            <span class="arrow_right"></span>
-                                        </a> 
-                                    </div>
-                                </div> 
-                            </div>
-                        </section>
+                        </section> 
                     </div> 
                 </section> 
                 <!-- end Контент для Мой кабинет -->

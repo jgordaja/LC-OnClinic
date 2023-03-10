@@ -42,8 +42,20 @@
     align-items: center;
 }
 
+@mixin flex-flex-start-align-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+
 @mixin flex-center-align-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin white-card($br) {
+    background: $white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+    border-radius: $br; 
 }
